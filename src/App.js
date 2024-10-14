@@ -24,6 +24,9 @@ import Desktop23 from './pages/Desktop23';
 import Desktop24 from './pages/Desktop24';
 import Desktop27 from './pages/Desktop27';
 import Desktop28 from './pages/Desktop28';
+import Marketers from './pages/Marketers';
+import Desktops9 from './pages/Desktops9';
+import Desktops14 from './pages/Desktop14';
 const App = () => {
   return (
     <Router>
@@ -54,6 +57,10 @@ const App = () => {
           <Route path="/desktop24" element={<Desktop24/>} />
           <Route path="/desktop27" element={<Desktop27/>} />
           <Route path="/desktop28" element={<Desktop28/>} />
+          <Route path="/marketer" element={<Marketers/>} />
+          <Route path="/desktop9" element={<Desktops9/>} />
+          <Route path="/desktop14" element={<Desktops14/>} />
+
 
         </Routes>
     </Router>
