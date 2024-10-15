@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const  Sidebar = () => {
+const HomeSidebar = () => {
   return (
     <div className="flex min-h-full bg-gray-100">
     {/* Sidebar */}
@@ -44,4 +44,4 @@ const  Sidebar = () => {
 };
 
 
-export default Sidebar;
+export default HomeSidebar;

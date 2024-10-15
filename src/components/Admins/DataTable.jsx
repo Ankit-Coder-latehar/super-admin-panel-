@@ -14,7 +14,7 @@ const DataTable = () => {
               placeholder="Search by name..."
               className="w-72 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
             />
-            <button className="absolute right-2 top-2 text-purple-600">
+            <button className="absolute right-0 top-0 text-white bg-[#5546A0] p-3 rounded-md">
               <FiSearch size={20} />
             </button>
           </div>

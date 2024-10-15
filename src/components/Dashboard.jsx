@@ -50,33 +50,35 @@ const Dashboard = () => {
         <div className="space-y-6">
           {/* Sidebar Images */}
           <div className="flex flex-col items-center space-y-6">
-          <div className="p-2 rounded-lg">
+          <div className="flex flex-col items-center space-y-6">
+          <a href="/" className=" rounded-lg bg-[#111] transition-colors duration-300">
             <img src="/element-3.svg" alt="Dashboard Icon" className="w-8 h-8" />
-          </div>
-          <div className="p-0">
+          </a>
+          <a href="/dashboard2" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/personalcard.svg" alt="Calendar Icon" className="w-8 h-8" />
-          </div>
-          <div className="p-0">
+          </a>
+          <a href="/branch" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/location.svg" alt="Users Icon" className="w-8 h-8" />
-          </div>
-          <div className="p-0">
+          </a>
+          <a href="/fakebusiness" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/brifecase-cross.svg" alt="Chart Icon" className="w-8 h-8" />
-          </div>
-          <div className="p-0">
+          </a>
+          <a href="/seoContent" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/send-sqaure-2.svg" alt="Logout Icon" className="w-8 h-8" />
-          </div>
-          <div className="p-0">
+          </a>
+          <a href="#" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/bag-2.svg" alt="Logout Icon" className="w-8 h-8" />
-          </div>
-          <div className="p-0">
+          </a>
+          <a href="/admins" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/security-user.svg" alt="Logout Icon" className="w-8 h-8" />
-          </div>
-          <div className="p-0">
+          </a>
+          <a href="/marketreport" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/chart.svg" alt="Logout Icon" className="w-8 h-8" />
-          </div>
-          <div className="p-0">
+          </a>
+          <a href="#" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/logout.svg" alt="Logout Icon" className="w-8 h-8" />
-          </div>
+          </a>
+        </div>
           </div>
         </div>
       </aside>

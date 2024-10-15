@@ -1,6 +1,6 @@
 import React from 'react';
 import BusinessHistory from '../components/Marketerreport';
-import Sidebar from '../components/Sidebar';
+import MarketReportSidebar from '../components/MarketReportSidebar';
 
 
 
@@ -16,7 +16,7 @@ const MarketReport = () => {
       <div className="flex bg-gray-100 mt-[-40px]">
         {/* Sidebar */}
         <div className="w-1/9 bg-purple-700 min-h-screen">
-          <Sidebar/>
+          <MarketReportSidebar/>
         </div>
 
         {/* Main content (Business Table) */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../components/Sidebar';
+import SeoSidebar from '../components/SeoSidebar';
 import SearchBar from '../components/seoContents/SeoContent';
 import SeoTable from '../components/seoContents/SeoTable';
 
@@ -15,7 +15,7 @@ const SeoContent = () => {
       <div className="flex bg-gray-100 mt-[-60px]">
         {/* Sidebar */}
         <div className="w-1/9 bg-purple-700 min-h-screen mt-10">
-          <Sidebar />
+          <SeoSidebar />
         </div>
 
         {/* Main content (Business Table) */}

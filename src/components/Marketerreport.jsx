@@ -34,9 +34,9 @@ const BusinessHistory = () => {
 
           {/* Generate Button */}
           <div className="w-full md:w-1/3 flex justify-end">
-            <button className="bg-[#5546A0] text-white px-6 py-2 rounded-lg shadow-md hover:bg-purple-500">
+            <a href=''><button className="bg-[#5546A0] text-white px-6 py-2 rounded-lg shadow-md hover:bg-purple-500">
               Generate
-            </button>
+            </button></a>
           </div>
         </div>
       </div>

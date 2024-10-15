@@ -30,7 +30,6 @@ import Desktops14 from './pages/Desktop14';
 const App = () => {
   return (
     <Router>
-        
         <Routes>
           {/* Define your routes */}
           <Route path="/" element={<Dashboard />} />
@@ -60,7 +59,7 @@ const App = () => {
           <Route path="/marketer" element={<Marketers/>} />
           <Route path="/desktop9" element={<Desktops9/>} />
           <Route path="/desktop14" element={<Desktops14/>} />
-
+          
 
         </Routes>
     </Router>

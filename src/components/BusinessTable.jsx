@@ -54,9 +54,9 @@ const BusinessTable = () => {
           <input
             type="text"
             placeholder="Search by business name..."
-            className="w-full py-2 pl-4 pr-10 border rounded-full border-gray-300 focus:outline-none"
+            className="w-full py-2 pl-4 pr-10 border rounded-md border-gray-300 focus:outline-none"
           />
-          <button className="absolute right-4 top-2 text-[#5546A0]">
+          <button className="absolute right-0 top-0 text-white bg-[#5546A0] p-3 rounded-md">
             <FaSearch />
           </button>
         </div>

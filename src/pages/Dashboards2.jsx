@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../components/Sidebar';
+import Dashboard2Sidebar from '../components/Dashboard2.sidebar';
 import BusinessTable from '../components/BusinessTable';
 
 const Dashboards2 = () => {
@@ -8,7 +8,7 @@ const Dashboards2 = () => {
         
       {/* Sidebar */}
       <div className="w-1/13 bg-purple-700 min-h-screen ">
-        <Sidebar />
+        <Dashboard2Sidebar />
       </div>
 
       {/* Main content (Business Table) */}

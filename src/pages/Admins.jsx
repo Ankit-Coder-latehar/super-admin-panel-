@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../components/Sidebar';
+import AdminSidebar from '../components/AdminSidebar';
 import DataTable from '../components/Admins/DataTable';
 const Admins = () => {
   return (
@@ -13,7 +13,7 @@ const Admins = () => {
       <div className="flex bg-gray-100 mt-[-40px]">
         {/* Sidebar */}
         <div className="w-1/9 bg-purple-700 min-h-screen">
-          <Sidebar />
+          <AdminSidebar />
         </div>
 
         {/* Main content (Business Table) */}
