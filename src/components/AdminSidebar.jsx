@@ -12,7 +12,7 @@ const AdminSidebar = () => {
           <a href="/" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/element-3.svg" alt="Dashboard Icon" className="w-8 h-8" />
           </a>
-          <a href="#" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
+          <a href="/dashboard2" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/personalcard.svg" alt="Calendar Icon" className="w-8 h-8" />
           </a>
           <a href="/branch" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
@@ -24,13 +24,13 @@ const AdminSidebar = () => {
           <a href="/seoContent" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/send-sqaure-2.svg" alt="Logout Icon" className="w-8 h-8" />
           </a>
-          <a href="#" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
+          <a href="" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/bag-2.svg" alt="Logout Icon" className="w-8 h-8" />
           </a>
           <a href="/admins" className=" rounded-lg bg-[#111] transition-colors duration-300">
             <img src="/security-user.svg" alt="Logout Icon" className="w-8 h-8" />
           </a>
-          <a href="/marketreport" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
+          <a href="/result" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/chart.svg" alt="Logout Icon" className="w-8 h-8" />
           </a>
           <a href="#" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">

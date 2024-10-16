@@ -9,7 +9,7 @@ const Result = () => {
     <div className="min-h-screen">
       {/* Top Heading */}
       <div className="bg-gray-100 p-4 text-left ml-20 text-4xl font-bold text-[#5546A0]">
-        Result
+        Report
       </div>
 
       {/* Main layout with Sidebar and Business Table */}

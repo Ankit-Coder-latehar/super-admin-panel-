@@ -16,21 +16,26 @@ const Card = ({ title, imageUrl, altText }) => {
 const ResultTable = () => {
   return (
     <div className="flex justify-start space-x-4"> {/* Changed justify-center to justify-start */}
-      <Card
+      <a href="/subscriptions"><Card
         title="Subscription History"
         imageUrl="/Rectangle 425.png" // Replace with actual image URL
         altText="Subscription History"
       />
+      </a>
+      <a href="/marketCredits">
       <Card
         title="Marketing Credit History"
         imageUrl="/Rectangle 426.png" // Replace with actual image URL
         altText="Marketing Credit History"
       />
+      </a>
+      <a href="/marketreport">
       <Card
         title="Marketer Reports"
         imageUrl="/Rectangle 427.png" // Replace with actual image URL
         altText="Marketer Reports"
       />
+      </a>
     </div>
   );
 };

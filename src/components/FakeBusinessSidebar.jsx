@@ -30,7 +30,7 @@ const FakeBusinessSidebar = () => {
           <a href="/admins" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/security-user.svg" alt="Logout Icon" className="w-8 h-8" />
           </a>
-          <a href="/marketreport" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
+          <a href="/result" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/chart.svg" alt="Logout Icon" className="w-8 h-8" />
           </a>
           <a href="#" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
