@@ -44,41 +44,39 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
       {/* Sidebar */}
-      <aside className="w-1/13 bg-[#5546A0] text-white p-4 h-1/2 rounded-full mt-12 ml-4">
+      <aside className="w-full lg:w-1/12 bg-[#5546A0] text-white p-4 h-auto lg:h-screen lg:rounded-full lg:mt-12 lg:ml-4">
         <div className="space-y-6">
           {/* Sidebar Images */}
-          <div className="flex flex-col items-center space-y-6">
-          <div className="flex flex-col items-center space-y-6">
-          <a href="/" className=" rounded-lg bg-[#111] transition-colors duration-300">
-            <img src="/element-3.svg" alt="Dashboard Icon" className="w-8 h-8" />
-          </a>
-          <a href="/dashboard2" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
-            <img src="/personalcard.svg" alt="Calendar Icon" className="w-8 h-8" />
-          </a>
-          <a href="/branch" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
-            <img src="/location.svg" alt="Users Icon" className="w-8 h-8" />
-          </a>
-          <a href="/fakebusiness" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
-            <img src="/brifecase-cross.svg" alt="Chart Icon" className="w-8 h-8" />
-          </a>
-          <a href="/seoContent" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
-            <img src="/send-sqaure-2.svg" alt="Logout Icon" className="w-8 h-8" />
-          </a>
-          <a href="#" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
-            <img src="/bag-2.svg" alt="Logout Icon" className="w-8 h-8" />
-          </a>
-          <a href="/admins" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
-            <img src="/security-user.svg" alt="Logout Icon" className="w-8 h-8" />
-          </a>
-          <a href="/result" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
-            <img src="/chart.svg" alt="Logout Icon" className="w-8 h-8" />
-          </a>
-          <a href="#" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
-            <img src="/logout.svg" alt="Logout Icon" className="w-8 h-8" />
-          </a>
-        </div>
+          <div className="flex lg:flex-col items-center space-x-4 lg:space-x-0 lg:space-y-6">
+            <a href="/" className="rounded-lg bg-[#111] transition-colors duration-300">
+              <img src="/element-3.svg" alt="Dashboard Icon" className="w-8 h-8" />
+            </a>
+            <a href="/dashboard2" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
+              <img src="/personalcard.svg" alt="Calendar Icon" className="w-8 h-8" />
+            </a>
+            <a href="/branch" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
+              <img src="/location.svg" alt="Users Icon" className="w-8 h-8" />
+            </a>
+            <a href="/fakebusiness" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
+              <img src="/brifecase-cross.svg" alt="Chart Icon" className="w-8 h-8" />
+            </a>
+            <a href="/seoContent" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
+              <img src="/send-sqaure-2.svg" alt="Logout Icon" className="w-8 h-8" />
+            </a>
+            <a href="#" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
+              <img src="/bag-2.svg" alt="Logout Icon" className="w-8 h-8" />
+            </a>
+            <a href="/admins" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
+              <img src="/security-user.svg" alt="Logout Icon" className="w-8 h-8" />
+            </a>
+            <a href="/result" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
+              <img src="/chart.svg" alt="Logout Icon" className="w-8 h-8" />
+            </a>
+            <a href="#" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
+              <img src="/logout.svg" alt="Logout Icon" className="w-8 h-8" />
+            </a>
           </div>
         </div>
       </aside>
@@ -88,29 +86,29 @@ const Dashboard = () => {
         <h1 className="text-2xl font-bold text-purple-800 mb-6">Dashboard</h1>
 
         {/* Stats Section */}
-        <section className="grid grid-cols-3 gap-6 mb-6">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
           <div className="bg-white p-6 rounded-lg shadow">
-            <p className="text-black font-bold mt-[-10px] text-2xl">Appointment Booked</p>
-            <h2 className="text-4xl text-pink-600">30</h2>
+            <p className="text-black font-bold text-lg lg:text-2xl">Appointment Booked</p>
+            <h2 className="text-3xl lg:text-4xl text-pink-600">30</h2>
             <p className="text-sm">(In 1 month)</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow">
-            <p className="text-black font-bold mt-[-10px] text-2xl">New Businesses Registered</p>
-            <h2 className="text-4xl text-pink-600">2</h2>
+            <p className="text-black font-bold text-lg lg:text-2xl">New Businesses Registered</p>
+            <h2 className="text-3xl lg:text-4xl text-pink-600">2</h2>
             <p className="text-sm">(In 1 month)</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow">
-            <p className="text-black font-bold mt-[-10px] text-2xl">Total Businesses Registered</p>
-            <h2 className="text-4xl text-pink-600">15</h2>
+            <p className="text-black font-bold text-lg lg:text-2xl">Total Businesses Registered</p>
+            <h2 className="text-3xl lg:text-4xl text-pink-600">15</h2>
             <p className="text-sm">(In 1 month)</p>
           </div>
         </section>
 
         {/* Subscription and Charts Section */}
-        <section className="grid grid-cols-2 gap-6">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Table */}
           <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-2xl text-black font-bold mb-4">Close to subscription payment</h3>
+            <h3 className="text-xl lg:text-2xl text-black font-bold mb-4">Close to subscription payment</h3>
             <table className="w-full text-left">
               <thead>
                 <tr className="text-gray-500">
@@ -127,7 +125,7 @@ const Dashboard = () => {
                   <td>+971325841253</td>
                   <td>25</td>
                 </tr>
-                <tr className='bg-gray-100'>
+                <tr className="bg-gray-100">
                   <td className="py-2">Beauty Minds Salon</td>
                   <td>Bahrain</td>
                   <td>+971325841253</td>
@@ -139,7 +137,7 @@ const Dashboard = () => {
                   <td>+971325841253</td>
                   <td>16</td>
                 </tr>
-                <tr className='bg-gray-100'>
+                <tr className="bg-gray-100">
                   <td className="py-2">Beauty Minds Salon</td>
                   <td>Emirates</td>
                   <td>+971325841253</td>
@@ -151,7 +149,7 @@ const Dashboard = () => {
 
           {/* Chart */}
           <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="  mb-4 text-2xl text-black font-bold">Close to subscription payment</h3>
+            <h3 className="mb-4 text-xl lg:text-2xl text-black font-bold">Close to subscription payment</h3>
             <div className="h-52 w-full bg-white rounded-lg">
               <Line data={data} options={options} />
             </div>
@@ -159,8 +157,7 @@ const Dashboard = () => {
         </section>
 
         {/* Top Businesses Section */}
-        
-        <section className="grid grid-cols-3 gap-6 mt-6 bg-white rounded-md p-4">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 bg-white rounded-md p-4">
           <div className="bg-pink-100 p-6 rounded-lg shadow">
             <h4 className="text-lg font-semibold text-pink-600">#1 Business Minds Salon</h4>
             <p>Employee: 10</p>
@@ -186,3 +183,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+

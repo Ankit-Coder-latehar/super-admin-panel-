@@ -46,11 +46,11 @@ const BusinessTable = () => {
   };
 
   return (
-    <div className="p-8">
+    <div className="p-4 sm:p-8">
       {/* Search and New Button Section */}
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0">
         {/* Search Bar */}
-        <div className="relative w-1/3">
+        <div className="relative w-full sm:w-1/3">
           <input
             type="text"
             placeholder="Search by business name..."
@@ -61,23 +61,23 @@ const BusinessTable = () => {
           </button>
         </div>
         {/* New Button */}
-        <button className="flex items-center bg-[#5546A0] text-white py-2 px-4 rounded-full hover:bg-[#5546A0]">
+        <button className="w-full sm:w-auto flex items-center bg-[#5546A0] text-white py-2 px-4 rounded-full hover:bg-[#5546A0]">
           + New
         </button>
       </div>
 
       {/* Table */}
       <div className="overflow-x-auto border-[#EB5F8C] rounded-2xl">
-        <table className="w-full border-separate border-spacing-0 border-[#EB5F8C] rounded-lg">
+        <table className="w-full border-separate border-spacing-0 border-[#EB5F8C] rounded-lg text-sm sm:text-base">
           <thead className="bg-[#EB5F8C] text-white">
             <tr>
-              <th className="px-4 py-2 text-left">Business Name</th>
-              <th className="px-4 py-2 text-left">Branches Count</th>
-              <th className="px-4 py-2 text-left">Subscription</th>
-              <th className="px-4 py-2 text-left">Expire Date</th>
-              <th className="px-4 py-2 text-left">M-Credit</th>
-              <th className="px-4 py-2 text-left">Active</th>
-              <th className="px-4 py-2 text-left">Actions</th>
+              <th className="px-2 sm:px-4 py-2 text-left">Business Name</th>
+              <th className="px-2 sm:px-4 py-2 text-left">Branches Count</th>
+              <th className="px-2 sm:px-4 py-2 text-left">Subscription</th>
+              <th className="px-2 sm:px-4 py-2 text-left">Expire Date</th>
+              <th className="px-2 sm:px-4 py-2 text-left">M-Credit</th>
+              <th className="px-2 sm:px-4 py-2 text-left">Active</th>
+              <th className="px-2 sm:px-4 py-2 text-left">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -88,12 +88,12 @@ const BusinessTable = () => {
                   index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
                 } text-gray-700 border-b hover:bg-gray-100`}
               >
-                <td className="px-4 py-2">{row.businessName}</td>
-                <td className="px-4 py-2">{row.branches}</td>
-                <td className="px-4 py-2">{row.subscription}</td>
-                <td className="px-4 py-2">{row.expireDate}</td>
-                <td className="px-4 py-2">{row.mCredit}</td>
-                <td className="px-4 py-2">
+                <td className="px-2 sm:px-4 py-2">{row.businessName}</td>
+                <td className="px-2 sm:px-4 py-2">{row.branches}</td>
+                <td className="px-2 sm:px-4 py-2">{row.subscription}</td>
+                <td className="px-2 sm:px-4 py-2">{row.expireDate}</td>
+                <td className="px-2 sm:px-4 py-2">{row.mCredit}</td>
+                <td className="px-2 sm:px-4 py-2">
                   <label className="flex items-center cursor-pointer">
                     <input
                       type="checkbox"
@@ -103,20 +103,20 @@ const BusinessTable = () => {
                     />
                     <div className="relative">
                       <div
-                        className={`block w-10 h-6 rounded-full transition ${
+                        className={`block w-8 sm:w-10 h-5 sm:h-6 rounded-full transition ${
                           row.active ? 'bg-green-400' : 'bg-gray-300'
                         }`}
                       ></div>
                       <div
-                        className={`absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow transition transform ${
-                          row.active ? 'translate-x-4' : ''
+                        className={`absolute left-1 top-1 w-3 sm:w-4 h-3 sm:h-4 bg-white rounded-full shadow transition transform ${
+                          row.active ? 'translate-x-4 sm:translate-x-4' : ''
                         }`}
                       ></div>
                     </div>
                   </label>
                 </td>
-                <td className="px-4 py-4 flex space-x-2 mt-4">
-                  <button className="text-black ">
+                <td className="px-2 sm:px-4 py-4 flex space-x-2">
+                  <button className="text-black">
                     <FaPen />
                   </button>
                   <button className="text-black">
@@ -133,4 +133,5 @@ const BusinessTable = () => {
 };
 
 export default BusinessTable;
+
 
