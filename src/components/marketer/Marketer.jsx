@@ -37,12 +37,19 @@ const Marketer = () => {
     },
   ]);
 
+  const [activePopup, setActivePopup] = useState(null); // To track which row's popup is open
+
   // Toggle active state for a row
   const toggleActive = (index) => {
     const updatedData = businessData.map((item, idx) =>
       idx === index ? { ...item, active: !item.active } : item
     );
     setBusinessData(updatedData);
+  };
+
+  // Toggle popup visibility for a row
+  const togglePopup = (index) => {
+    setActivePopup(activePopup === index ? null : index); // Toggle between opening and closing
   };
 
   return (
@@ -61,9 +68,11 @@ const Marketer = () => {
           </button>
         </div>
         {/* New Button */}
-        <button className="flex items-center bg-[#5546A0] text-white py-2 px-4 rounded-md hover:bg-[#5546A0]">
-          + New
-        </button>
+        <a href="/desktop23">
+          <button className="flex items-center bg-[#5546A0] text-white py-2 px-4 rounded-md hover:bg-[#5546A0]">
+            + New
+          </button>
+        </a>
       </div>
 
       {/* Table */}
@@ -115,13 +124,23 @@ const Marketer = () => {
                     </div>
                   </label>
                 </td>
-                <td className="px-4 py-4 flex space-x-2 mt-4">
-                  <button className="text-black ">
-                    <FaPen />
-                  </button>
-                  <button className="text-black">
+                <td className="relative px-4 py-4 flex space-x-2 mt-4">
+                  <button
+                    className="text-black"
+                    onClick={() => togglePopup(index)}
+                  >
                     <FaEllipsisV />
                   </button>
+                  {activePopup === index && (
+                    <div className="absolute top-10 right-0 w-32 bg-white shadow-lg border rounded-md z-10">
+                      <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                        Edit
+                      </button>
+                      <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                        Delete
+                      </button>
+                    </div>
+                  )}
                 </td>
               </tr>
             ))}
@@ -133,3 +152,4 @@ const Marketer = () => {
 };
 
 export default Marketer;
+

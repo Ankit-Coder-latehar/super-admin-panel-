@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from '../components/Sidebar';
 import Desktop14Form from '../components/Desktop14/Desktop14';
+import FakeBusinessSidebar from '../components/FakeBusinessSidebar';
 const Desktops14 = () => {
   return (
     <div className="min-h-screen">
@@ -13,7 +14,7 @@ const Desktops14 = () => {
       <div className="flex bg-gray-100 mt-[-40px]">
         {/* Sidebar */}
         <div className="w-1/9 bg-purple-700 min-h-screen">
-          <Sidebar />
+          <FakeBusinessSidebar/>
         </div>
 
         {/* Main content (Business Table) */}

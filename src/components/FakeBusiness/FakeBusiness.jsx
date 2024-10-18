@@ -18,9 +18,9 @@ const FakeBusiness = () => {
         </div>
 
         {/* New Button */}
-        <button className="w-full lg:w-auto flex justify-center items-center bg-[#5546A0] text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition-all">
+        <a href='/desktop14'><button className="w-full lg:w-auto flex justify-center items-center bg-[#5546A0] text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition-all">
           + New
-        </button>
+        </button></a>
       </div>
     </div>
   );

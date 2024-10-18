@@ -17,9 +17,9 @@ const SearchBar = () => {
           </button>
         </div>
         {/* New Button */}
-        <button className="flex items-center bg-[#5546A0] text-white py-2 px-4 rounded-md hover:bg-[#5546A0]">
+        <a href='/desktop18'><button className="flex items-center bg-[#5546A0] text-white py-2 px-4 rounded-md hover:bg-[#5546A0]">
           + New
-        </button>
+        </button></a>
       </div>
     </div>
   );

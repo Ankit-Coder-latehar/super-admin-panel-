@@ -24,10 +24,10 @@ const SeoSidebar = () => {
           <a href="/seoContent" className=" rounded-lg bg-[#111] transition-colors duration-300">
             <img src="/send-sqaure-2.svg" alt="Logout Icon" className="w-8 h-8" />
           </a>
-          <a href="#" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
+          <a href="/marketer" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/bag-2.svg" alt="Logout Icon" className="w-8 h-8" />
           </a>
-          <a href="#" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
+          <a href="/admin" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/security-user.svg" alt="Logout Icon" className="w-8 h-8" />
           </a>
           <a href="/result" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">

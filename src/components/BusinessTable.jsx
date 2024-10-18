@@ -37,12 +37,19 @@ const BusinessTable = () => {
     },
   ]);
 
+  const [activePopup, setActivePopup] = useState(null); // Track which row's popup is open
+
   // Toggle active state for a row
   const toggleActive = (index) => {
     const updatedData = businessData.map((item, idx) =>
       idx === index ? { ...item, active: !item.active } : item
     );
     setBusinessData(updatedData);
+  };
+
+  // Toggle popup visibility for a row
+  const togglePopup = (index) => {
+    setActivePopup(activePopup === index ? null : index); // Toggle between open/close
   };
 
   return (
@@ -61,9 +68,11 @@ const BusinessTable = () => {
           </button>
         </div>
         {/* New Button */}
-        <button className="w-full sm:w-auto flex items-center bg-[#5546A0] text-white py-2 px-4 rounded-full hover:bg-[#5546A0]">
-          + New
-        </button>
+        <a href="/desktop9">
+          <button className="w-full sm:w-auto flex items-center bg-[#5546A0] text-white py-2 px-4 rounded-full hover:bg-[#5546A0]">
+            + New
+          </button>
+        </a>
       </div>
 
       {/* Table */}
@@ -115,13 +124,29 @@ const BusinessTable = () => {
                     </div>
                   </label>
                 </td>
-                <td className="px-2 sm:px-4 py-4 flex space-x-2">
+                <td className="px-2 sm:px-4 py-4 flex space-x-2 relative">
                   <button className="text-black">
                     <FaPen />
                   </button>
-                  <button className="text-black">
+                  <button
+                    className="text-black"
+                    onClick={() => togglePopup(index)} // Show popup for this row
+                  >
                     <FaEllipsisV />
                   </button>
+
+                  {/* Popup for Edit and Delete */}
+                  {activePopup === index && (
+                    <div className="absolute right-0 top-8 w-32 bg-white shadow-lg border rounded-md z-10">
+                      <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                        Edit
+                      </button>
+                      <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                        Subscription
+                      </button>
+                    
+                    </div>
+                  )}
                 </td>
               </tr>
             ))}

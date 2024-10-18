@@ -71,7 +71,7 @@ const Dashboard2Sidebar = () => {
                 className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
               />
             </a>
-            <a href="#" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
+            <a href="/marketer" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
               <img
                 src="/bag-2.svg"
                 alt="Bag Icon"

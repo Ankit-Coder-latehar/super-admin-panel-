@@ -18,10 +18,10 @@ const DataTable = () => {
               <FiSearch size={20} />
             </button>
           </div>
-          <button className="flex items-center bg-[#5546A0] text-white px-4 py-2 rounded-md hover:bg-purple-700">
+          <a href='/desktop27'><button className="flex items-center bg-[#5546A0] text-white px-4 py-2 rounded-md hover:bg-purple-700">
             <AiOutlinePlus className="mr-2" />
             New
-          </button>
+          </button></a>
         </div>
 
         {/* Table */}
@@ -51,9 +51,9 @@ const DataTable = () => {
                   Admin
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                  <button className="text-gray-500 hover:text-gray-700">
-                    <FiMoreHorizontal size={20} />
-                  </button>
+                 <a href="/desktop28"> <button className=" hover:text-gray-700 rounded-md bg-gray-300 text-white px-4 py-2">
+                    Edit
+                  </button></a>
                 </td>
               </tr>
               {/* Add more rows as needed */}
