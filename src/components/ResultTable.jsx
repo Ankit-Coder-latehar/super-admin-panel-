@@ -15,26 +15,28 @@ const Card = ({ title, imageUrl, altText }) => {
 
 const ResultTable = () => {
   return (
-    <div className="flex justify-start space-x-4"> {/* Changed justify-center to justify-start */}
-      <a href="/subscriptions"><Card
-        title="Subscription History"
-        imageUrl="/Rectangle 425.png" // Replace with actual image URL
-        altText="Subscription History"
-      />
+    <div className="flex flex-wrap justify-start md:justify-center space-x-4 space-y-4 md:space-y-0"> 
+      {/* flex-wrap makes cards stack vertically on mobile */}
+      <a href="/subscriptions" className="w-full md:w-auto"> {/* Adjust width for mobile */}
+        <Card
+          title="Subscription History"
+          imageUrl="/Rectangle 425.png"
+          altText="Subscription History"
+        />
       </a>
-      <a href="/marketCredits">
-      <Card
-        title="Marketing Credit History"
-        imageUrl="/Rectangle 426.png" // Replace with actual image URL
-        altText="Marketing Credit History"
-      />
+      <a href="/marketCredits" className="w-full md:w-auto">
+        <Card
+          title="Marketing Credit History"
+          imageUrl="/Rectangle 426.png"
+          altText="Marketing Credit History"
+        />
       </a>
-      <a href="/marketreport">
-      <Card
-        title="Marketer Reports"
-        imageUrl="/Rectangle 427.png" // Replace with actual image URL
-        altText="Marketer Reports"
-      />
+      <a href="/marketreport" className="w-full md:w-auto">
+        <Card
+          title="Marketer Reports"
+          imageUrl="/Rectangle 427.png"
+          altText="Marketer Reports"
+        />
       </a>
     </div>
   );

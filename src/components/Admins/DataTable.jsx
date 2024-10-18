@@ -7,12 +7,12 @@ const DataTable = () => {
     <div className="min-h-screen bg-gray-100 p-8">
       <div className="max-w-5xl mx-auto">
         {/* Search bar and New button */}
-        <div className="flex justify-between items-center mb-4">
-          <div className="relative">
+        <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
+          <div className="relative w-full sm:w-auto mb-4 sm:mb-0">
             <input
               type="text"
               placeholder="Search by name..."
-              className="w-72 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
+              className="w-full sm:w-72 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
             />
             <button className="absolute right-0 top-0 text-white bg-[#5546A0] p-3 rounded-md">
               <FiSearch size={20} />
@@ -87,3 +87,4 @@ const DataTable = () => {
 };
 
 export default DataTable;
+

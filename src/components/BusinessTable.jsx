@@ -72,10 +72,10 @@ const BusinessTable = () => {
           <thead className="bg-[#EB5F8C] text-white">
             <tr>
               <th className="px-2 sm:px-4 py-2 text-left">Business Name</th>
-              <th className="px-2 sm:px-4 py-2 text-left">Branches Count</th>
-              <th className="px-2 sm:px-4 py-2 text-left">Subscription</th>
-              <th className="px-2 sm:px-4 py-2 text-left">Expire Date</th>
-              <th className="px-2 sm:px-4 py-2 text-left">M-Credit</th>
+              <th className="px-2 sm:px-4 py-2 text-left hidden sm:table-cell">Branches Count</th>
+              <th className="px-2 sm:px-4 py-2 text-left hidden lg:table-cell">Subscription</th>
+              <th className="px-2 sm:px-4 py-2 text-left hidden sm:table-cell">Expire Date</th>
+              <th className="px-2 sm:px-4 py-2 text-left hidden lg:table-cell">M-Credit</th>
               <th className="px-2 sm:px-4 py-2 text-left">Active</th>
               <th className="px-2 sm:px-4 py-2 text-left">Actions</th>
             </tr>
@@ -89,10 +89,10 @@ const BusinessTable = () => {
                 } text-gray-700 border-b hover:bg-gray-100`}
               >
                 <td className="px-2 sm:px-4 py-2">{row.businessName}</td>
-                <td className="px-2 sm:px-4 py-2">{row.branches}</td>
-                <td className="px-2 sm:px-4 py-2">{row.subscription}</td>
-                <td className="px-2 sm:px-4 py-2">{row.expireDate}</td>
-                <td className="px-2 sm:px-4 py-2">{row.mCredit}</td>
+                <td className="px-2 sm:px-4 py-2 hidden sm:table-cell">{row.branches}</td>
+                <td className="px-2 sm:px-4 py-2 hidden lg:table-cell">{row.subscription}</td>
+                <td className="px-2 sm:px-4 py-2 hidden sm:table-cell">{row.expireDate}</td>
+                <td className="px-2 sm:px-4 py-2 hidden lg:table-cell">{row.mCredit}</td>
                 <td className="px-2 sm:px-4 py-2">
                   <label className="flex items-center cursor-pointer">
                     <input

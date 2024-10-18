@@ -23,14 +23,13 @@ const BusinessForm = () => {
       </form>
 
       {/* Empty State */}
-      <div className="flex flex-col items-center justify-center text-center w-full lg:w-auto mt-6 lg:mt-0 lg:ml-10">
+      <div className="flex flex-col items-center justify-center text-center w-full lg:w-auto lg:ml-10 lg:ml-auto lg:h-full lg:items-center lg:justify-center mr-40">
         <div className="mb-6">
           {/* Add your icon component or image here */}
-          <img src="/empty-image.png" alt="No data" className="w-32 h-32 lg:w-40 lg:h-40" />
+          <img src="/empty-image.png" alt="No data" className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40" />
         </div>
-        <p className="text-md lg:text-lg text-gray-700">
-          Select a{' '}
-          <span className="text-purple-600 cursor-pointer">business</span> to view branches.
+        <p className="text-sm sm:text-md lg:text-lg text-gray-700">
+          Select a <span className="text-purple-600 cursor-pointer">business</span> to view branches.
         </p>
       </div>
     </div>
@@ -38,5 +37,6 @@ const BusinessForm = () => {
 };
 
 export default BusinessForm;
+
 
 
