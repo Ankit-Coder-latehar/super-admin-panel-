@@ -44,71 +44,72 @@ const Desktop9Form = () => {
         {/* Personal Information */}
         <section className="mb-8 flex">
           <div className="w-1/3">
-            <h3 className="font-medium text-lg mb-4">Personal Information</h3>
-          </div>
-          <div className="w-2/3 grid grid-cols-1 gap-y-6">
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">First Name</label>
-              <input
-                type="text"
-                placeholder="First Name"
-                className="w-2/3 p-3 border border-gray-300 rounded-lg"
-              />
-            </div>
+          <h3 className="font-medium text-lg mb-4 float-left ">Personal Information</h3></div> {/* Left side gap for alignment */}
+          <div className="w-2/3 ">
+            <div className="grid grid-cols-1 gap-y-6 ml-20">
+              <div className="flex flex-col ">
+                <label className="font-medium text-gray-700 mb-1">First Name</label>
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  className="p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
 
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">Last Name</label>
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="w-2/3 p-3 border border-gray-300 rounded-lg"
-              />
-            </div>
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">Last Name</label>
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  className="p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
 
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">Email Address</label>
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-2/3 p-3 border border-gray-300 rounded-lg"
-              />
-            </div>
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">Email Address</label>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
 
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">Phone Number</label>
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-2/3 p-3 border border-gray-300 rounded-lg"
-              />
-            </div>
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">Phone Number</label>
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  className="p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
 
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">Gender</label>
-              <select className="w-2/3 p-3 border border-gray-300 rounded-lg">
-                <option>Select gender</option>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Non-Binary</option>
-              </select>
-            </div>
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">Gender</label>
+                <select className="p-3 border border-gray-300 rounded-lg">
+                  <option>Select gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Non-Binary</option>
+                </select>
+              </div>
 
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">Username</label>
-              <input
-                type="text"
-                placeholder="Username"
-                className="w-2/3 p-3 border border-gray-300 rounded-lg"
-              />
-            </div>
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">Username</label>
+                <input
+                  type="text"
+                  placeholder="Username"
+                  className="p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
 
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">Password</label>
-              <input
-                type="password"
-                placeholder="Password"
-                className="w-2/3 p-3 border border-gray-300 rounded-lg"
-              />
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">Password</label>
+                <input
+                  type="password"
+                  placeholder="Password"
+                  className="p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -118,22 +119,22 @@ const Desktop9Form = () => {
         {/* Business Information */}
         <section className="mb-8 flex">
           <div className="w-1/3">
-            <h3 className="font-medium text-lg mb-4">Business Information</h3>
-          </div>
-          <div className="w-2/3 grid grid-cols-1 gap-y-6">
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">Business Name</label>
-              <input
-                type="text"
-                placeholder="Business Name"
-                className="w-2/3 p-3 border border-gray-300 rounded-lg"
-              />
-            </div>
+          <h3 className="font-medium text-lg mb-4 float-left">Business Information</h3></div> {/* Left side gap for alignment */}
+          <div className="w-2/3">
+           
+            <div className="grid grid-cols-1 gap-y-6 ml-20">
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">Business Name</label>
+                <input
+                  type="text"
+                  placeholder="Business Name"
+                  className="p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
 
-            {/* Updated Tags Section with Checkboxes */}
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">Tags</label>
-              <div className="w-2/3">
+              {/* Updated Tags Section with Checkboxes */}
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">Tags</label>
                 <div className="grid grid-cols-2 gap-4">
                   {/* All Tags Option */}
                   <div className="flex items-center">
@@ -146,7 +147,7 @@ const Desktop9Form = () => {
                     />
                     <label>Select All</label>
                   </div>
-                  
+
                   {/* Individual Tags */}
                   {tagsList.map((tag) => (
                     <div key={tag} className="flex items-center">
@@ -162,15 +163,15 @@ const Desktop9Form = () => {
                   ))}
                 </div>
               </div>
-            </div>
 
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">VAT No.</label>
-              <input
-                type="text"
-                placeholder="VAT No."
-                className="w-2/3 p-3 border border-gray-300 rounded-lg"
-              />
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">VAT No.</label>
+                <input
+                  type="text"
+                  placeholder="VAT No."
+                  className="p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -180,52 +181,54 @@ const Desktop9Form = () => {
         {/* Business Address */}
         <section className="mb-8 flex">
           <div className="w-1/3">
-            <h3 className="font-medium text-lg mb-4">Business Address</h3>
-          </div>
-          <div className="w-2/3 grid grid-cols-1 gap-y-6">
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">Country</label>
-              <input
-                type="text"
-                placeholder="Country"
-                className="w-2/3 p-3 border border-gray-300 rounded-lg"
-              />
-            </div>
+          <h3 className="font-medium text-lg mb-4 float-left">Business Address</h3>
+          </div> {/* Left side gap for alignment */}
+          <div className="w-2/3">
+            <div className="grid grid-cols-1 gap-y-6 ml-20">
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">Country</label>
+                <input
+                  type="text"
+                  placeholder="Country"
+                  className="p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
 
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">State</label>
-              <input
-                type="text"
-                placeholder="State"
-                className="w-2/3 p-3 border border-gray-300 rounded-lg"
-              />
-            </div>
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">State</label>
+                <input
+                  type="text"
+                  placeholder="State"
+                  className="p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
 
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">City</label>
-              <input
-                type="text"
-                placeholder="City"
-                className="w-2/3 p-3 border border-gray-300 rounded-lg"
-              />
-            </div>
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">City</label>
+                <input
+                  type="text"
+                  placeholder="City"
+                  className="p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
 
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">Address</label>
-              <input
-                type="text"
-                placeholder="Address"
-                className="w-2/3 p-3 border border-gray-300 rounded-lg"
-              />
-            </div>
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">Address</label>
+                <input
+                  type="text"
+                  placeholder="Address"
+                  className="p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
 
-            <div className="flex justify-end">
-              <label className="font-medium text-gray-700 w-1/3 text-right mr-4">Zip Code</label>
-              <input
-                type="text"
-                placeholder="Zip Code"
-                className="w-2/3 p-3 border border-gray-300 rounded-lg"
-              />
+              <div className="flex flex-col">
+                <label className="font-medium text-gray-700 mb-1">Zip Code</label>
+                <input
+                  type="text"
+                  placeholder="Zip Code"
+                  className="p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </section>
