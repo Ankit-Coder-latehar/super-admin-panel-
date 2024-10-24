@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { FiEye, FiEyeOff } from 'react-icons/fi';
 
 const Desktop9Form = () => {
-  const [selectedTags, setSelectedTags] = useState([]);
+  const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
+  const [selectedTag, setSelectedTag] = useState(''); // State to manage selected tag
+
   const tagsList = [
     'Haircut & Styling',
     'Facials & Skin Care',
@@ -17,42 +20,28 @@ const Desktop9Form = () => {
   ];
 
   const handleTagChange = (event) => {
-    const { value, checked } = event.target;
-
-    if (value === 'all') {
-      if (checked) {
-        setSelectedTags(tagsList);
-      } else {
-        setSelectedTags([]);
-      }
-    } else {
-      if (checked) {
-        setSelectedTags([...selectedTags, value]);
-      } else {
-        setSelectedTags(selectedTags.filter((tag) => tag !== value));
-      }
-    }
+    setSelectedTag(event.target.value); // Set the selected tag
   };
 
-  const isAllSelected = tagsList.length === selectedTags.length;
-
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50">
-      <div className="w-full max-w-4xl bg-white rounded-xl shadow-lg p-8">
+    <div className="min-h-screen items-left justify-start flex">
+      <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8 mr-40 mt-6">
         <h2 className="text-xl font-semibold mb-6">New Business</h2>
+        <hr className="p-2" />
 
         {/* Personal Information */}
         <section className="mb-8 flex">
           <div className="w-1/3">
-          <h3 className="font-medium text-lg mb-4 float-left ">Personal Information</h3></div> {/* Left side gap for alignment */}
-          <div className="w-2/3 ">
+            <h3 className="font-medium text-lg mb-4 float-left">Personal Information</h3>
+          </div>
+          <div className="w-2/3">
             <div className="grid grid-cols-1 gap-y-6 ml-20">
-              <div className="flex flex-col ">
+              <div className="flex flex-col">
                 <label className="font-medium text-gray-700 mb-1">First Name</label>
                 <input
                   type="text"
                   placeholder="First Name"
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
                 />
               </div>
 
@@ -61,7 +50,7 @@ const Desktop9Form = () => {
                 <input
                   type="text"
                   placeholder="Last Name"
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
                 />
               </div>
 
@@ -70,7 +59,7 @@ const Desktop9Form = () => {
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
                 />
               </div>
 
@@ -79,13 +68,13 @@ const Desktop9Form = () => {
                 <input
                   type="tel"
                   placeholder="Phone Number"
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
                 />
               </div>
 
               <div className="flex flex-col">
                 <label className="font-medium text-gray-700 mb-1">Gender</label>
-                <select className="p-3 border border-gray-300 rounded-lg">
+                <select className="p-3 border border-gray-300 bg-gray-50 rounded-lg">
                   <option>Select gender</option>
                   <option>Male</option>
                   <option>Female</option>
@@ -98,17 +87,24 @@ const Desktop9Form = () => {
                 <input
                   type="text"
                   placeholder="Username"
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
                 />
               </div>
 
-              <div className="flex flex-col">
+              <div className="flex flex-col relative">
                 <label className="font-medium text-gray-700 mb-1">Password</label>
                 <input
-                  type="password"
+                  type={showPassword ? 'text' : 'password'}
                   placeholder="Password"
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
                 />
+                {/* Eye icon to toggle visibility */}
+                <span
+                  className="absolute right-3 top-11 cursor-pointer"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <FiEyeOff /> : <FiEye />}
+                </span>
               </div>
             </div>
           </div>
@@ -119,49 +115,34 @@ const Desktop9Form = () => {
         {/* Business Information */}
         <section className="mb-8 flex">
           <div className="w-1/3">
-          <h3 className="font-medium text-lg mb-4 float-left">Business Information</h3></div> {/* Left side gap for alignment */}
+            <h3 className="font-medium text-lg mb-4 float-left">Business Information</h3>
+          </div>
           <div className="w-2/3">
-           
             <div className="grid grid-cols-1 gap-y-6 ml-20">
               <div className="flex flex-col">
                 <label className="font-medium text-gray-700 mb-1">Business Name</label>
                 <input
                   type="text"
                   placeholder="Business Name"
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
                 />
               </div>
 
-              {/* Updated Tags Section with Checkboxes */}
+              {/* Updated Tags Section with Dropdown */}
               <div className="flex flex-col">
                 <label className="font-medium text-gray-700 mb-1">Tags</label>
-                <div className="grid grid-cols-2 gap-4">
-                  {/* All Tags Option */}
-                  <div className="flex items-center">
-                    <input
-                      type="checkbox"
-                      value="all"
-                      checked={isAllSelected}
-                      onChange={handleTagChange}
-                      className="mr-2"
-                    />
-                    <label>Select All</label>
-                  </div>
-
-                  {/* Individual Tags */}
+                <select
+                  value={selectedTag}
+                  onChange={handleTagChange}
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
+                >
+                  <option value="">Select a tag</option>
                   {tagsList.map((tag) => (
-                    <div key={tag} className="flex items-center">
-                      <input
-                        type="checkbox"
-                        value={tag}
-                        checked={selectedTags.includes(tag)}
-                        onChange={handleTagChange}
-                        className="mr-2"
-                      />
-                      <label>{tag}</label>
-                    </div>
+                    <option key={tag} value={tag}>
+                      {tag}
+                    </option>
                   ))}
-                </div>
+                </select>
               </div>
 
               <div className="flex flex-col">
@@ -169,7 +150,7 @@ const Desktop9Form = () => {
                 <input
                   type="text"
                   placeholder="VAT No."
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
                 />
               </div>
             </div>
@@ -181,52 +162,52 @@ const Desktop9Form = () => {
         {/* Business Address */}
         <section className="mb-8 flex">
           <div className="w-1/3">
-          <h3 className="font-medium text-lg mb-4 float-left">Business Address</h3>
-          </div> {/* Left side gap for alignment */}
+            <h3 className="font-medium text-lg mb-4 float-left">Business Address</h3>
+          </div>
           <div className="w-2/3">
             <div className="grid grid-cols-1 gap-y-6 ml-20">
               <div className="flex flex-col">
-                <label className="font-medium text-gray-700 mb-1">Country</label>
+                <label className="font-medium text-gray-700  mb-1">Country</label>
                 <input
                   type="text"
                   placeholder="Country"
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
                 />
               </div>
 
               <div className="flex flex-col">
-                <label className="font-medium text-gray-700 mb-1">State</label>
+                <label className="font-medium text-gray-700  mb-1">State</label>
                 <input
                   type="text"
                   placeholder="State"
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
                 />
               </div>
 
               <div className="flex flex-col">
-                <label className="font-medium text-gray-700 mb-1">City</label>
+                <label className="font-medium text-gray-700  mb-1">City</label>
                 <input
                   type="text"
                   placeholder="City"
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
                 />
               </div>
 
               <div className="flex flex-col">
-                <label className="font-medium text-gray-700 mb-1">Address</label>
+                <label className="font-medium text-gray-700  mb-1">Address</label>
                 <input
                   type="text"
                   placeholder="Address"
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
                 />
               </div>
 
               <div className="flex flex-col">
-                <label className="font-medium text-gray-700 mb-1">Zip Code</label>
+                <label className="font-medium text-gray-700  mb-1">Zip Code</label>
                 <input
                   type="text"
                   placeholder="Zip Code"
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 bg-gray-50 rounded-lg"
                 />
               </div>
             </div>
@@ -258,5 +239,8 @@ const Desktop9Form = () => {
 };
 
 export default Desktop9Form;
+
+
+
 
 

@@ -12,8 +12,8 @@ const Business14Form = () => {
   });
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50">
-      <div className="w-full max-w-4xl bg-white rounded-xl shadow-lg p-8">
+    <div className="flex justify-center items-center min-h-screen ">
+      <div className="w-full max-w-4xl bg-white rounded-xl shadow-lg p-8 mr-40 mt-6">
         <h2 className="text-xl font-semibold mb-6">New Fake Business</h2>
 
         {/* Business Information */}
@@ -29,7 +29,7 @@ const Business14Form = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="w-10 h-10 text-purple-500 mb-2"
+                    className="w-10 h-10 text-[#5546A0] mb-2"
                   >
                     <path
                       strokeLinecap="round"
@@ -39,7 +39,7 @@ const Business14Form = () => {
                     />
                   </svg>
                   <span className="text-gray-500">Drag & Drop file here</span>
-                  <button className="mt-2 text-purple-500 underline">
+                  <button className="mt-2 text-[#5546A0] underline">
                     Choose file
                   </button>
                   <p className="text-xs text-gray-400">Maximum upload size: 1 MB</p>
@@ -164,7 +164,7 @@ const Business14Form = () => {
               className="p-3 border border-gray-300 rounded-lg"
             />
           </div>
-          <button className="mt-4 text-purple-500 underline">Add Tier</button>
+          <button className="mt-4 text-[#5546A0] underline">Add Tier</button>
         </section>
 
         {/* Buttons */}
@@ -172,7 +172,7 @@ const Business14Form = () => {
           <button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg">
             Cancel
           </button>
-          <button className="px-6 py-2 bg-purple-500 text-white rounded-lg">
+          <button className="px-6 py-2 bg-[#5546A0] text-white rounded-lg">
             Create
           </button>
         </div>
