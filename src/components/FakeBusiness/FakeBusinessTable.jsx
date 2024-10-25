@@ -12,9 +12,9 @@ const FakeBusinessTable = () => {
   ]);
 
   return (
-    <div className="p-4 sm:p-6 lg:p-8">
+    <div className="p-4 sm:p-6 lg:p-8 ">
       {/* Table */}
-      <div className="overflow-x-auto border-[#EB5F8C] rounded-2xl shadow-md">
+      <div className="overflow-x-auto border-[#EB5F8C] rounded-2xl shadow-md mt-[-40]">
         <table className="w-full border-separate border-spacing-0 border-[#EB5F8C] rounded-lg">
           <thead className="bg-[#EB5F8C] text-white">
             <tr>

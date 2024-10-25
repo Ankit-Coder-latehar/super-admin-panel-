@@ -1,4 +1,15 @@
 import React, { useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+
+// Fix default marker issue with react-leaflet
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
+  iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
+});
 
 const Business14Form = () => {
   const [workHours, setWorkHours] = useState({
@@ -42,7 +53,9 @@ const Business14Form = () => {
                   <button className="mt-2 text-[#5546A0] underline">
                     Choose file
                   </button>
-                  <p className="text-xs text-gray-400">Maximum upload size: 1 MB</p>
+                  <p className="text-xs text-gray-400">
+                    Maximum upload size: 1 MB
+                  </p>
                 </div>
               </label>
             </div>
@@ -50,7 +63,7 @@ const Business14Form = () => {
               <input
                 type="text"
                 placeholder="Business Name"
-                className="p-3 border border-gray-300 rounded-lg"
+                className="p-3 border border-gray-300 rounded-lg "
               />
               <input
                 type="text"
@@ -90,12 +103,20 @@ const Business14Form = () => {
             />
           </div>
           <div className="mt-4">
-            <iframe
+            {/* Leaflet Map */}
+            <MapContainer
+              center={[37.7749, -122.4194]}
+              zoom={13}
               className="w-full h-64 border border-gray-300 rounded-lg"
-              src="https://maps.google.com/maps?q=San Francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
+            >
+              <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              />
+              <Marker position={[37.7749, -122.4194]}>
+                <Popup>San Francisco</Popup>
+              </Marker>
+            </MapContainer>
           </div>
         </section>
 
@@ -182,3 +203,4 @@ const Business14Form = () => {
 };
 
 export default Business14Form;
+

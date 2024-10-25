@@ -33,7 +33,7 @@ const SeoSidebar = () => {
           <a href="/result" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/chart.svg" alt="Logout Icon" className="w-8 h-8" />
           </a>
-          <a href="#" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
+          <a href="/" className=" rounded-lg hover:bg-[#111] transition-colors duration-300">
             <img src="/logout.svg" alt="Logout Icon" className="w-8 h-8" />
           </a>
         </div>

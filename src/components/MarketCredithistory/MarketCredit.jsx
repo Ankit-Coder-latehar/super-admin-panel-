@@ -21,12 +21,12 @@ const MarketCredit = () => {
       </form>
 
       {/* Empty State */}
-      <div className="flex flex-col items-center justify-center text-center w-full lg:w-auto mt-6 lg:mt-0 lg:ml-10">
-        <div className="mb-6">
+      <div className="flex flex-col items-center justify-center w-full lg:w-auto lg:mt-0 lg:ml-10 h-full">
+        <div className="mb-6 flex justify-center">
           {/* Add your icon component or image here */}
           <img src="/empty-image.png" alt="No data" className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40" />
         </div>
-        <p className="text-sm sm:text-md lg:text-lg text-gray-700">
+        <p className="text-sm sm:text-md lg:text-lg text-gray-700 text-center">
           Select a <span className="text-purple-600 cursor-pointer">business</span> to view branches.
         </p>
       </div>
