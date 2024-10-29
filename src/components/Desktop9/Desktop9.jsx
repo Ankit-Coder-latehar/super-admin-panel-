@@ -31,18 +31,15 @@ const BusinessForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center py-12">
-      <div className="w-full max-w-3xl bg-white rounded-2xl shadow-md p-8">
-        <h2 className="text-2xl font-semibold mb-6">New Fake Business</h2>
+    <div className="min-h-screen flex justify-center py-8 px-2 sm:px-6 lg:px-8 bg-gray-50 ml-10 sm:ml-0 ">
+      <div className="w-full max-w-md sm:max-w-4xl bg-white rounded-lg shadow-md p-4 sm:p-8 transform ml-4 sm:ml-0">
+        <h2 className="text-2xl font-semibold mb-6 text-center">New Fake Business</h2>
 
         {/* Business Information */}
         <section className="mb-6">
           <h3 className="font-medium text-lg mb-4">Business Information</h3>
-          <div className="grid grid-cols-2 gap-4 items-start">
-            {/* Empty Space */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start">
             <div className="h-full"></div>
-
-            {/* File Upload */}
             <div className="flex justify-center items-center border-dashed border-2 border-gray-300 rounded-lg p-4">
               <div className="text-center">
                 <p className="mb-2 text-gray-500">Drag & Drop file here</p>
@@ -56,7 +53,7 @@ const BusinessForm = () => {
           </div>
 
           {/* Business Details */}
-          <div className="grid grid-cols-1 gap-y-4 mt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
             <div>
               <label className="font-medium text-gray-700 mb-1">Business Name</label>
               <input
@@ -97,7 +94,7 @@ const BusinessForm = () => {
         {/* Business Address */}
         <section className="mb-6">
           <h3 className="font-medium text-lg mb-4">Business Address</h3>
-          <div className="grid grid-cols-1 gap-y-4">
+          <div className="grid grid-cols-1 gap-4">
             <div>
               <label className="font-medium text-gray-700 mb-1">Country</label>
               <input
@@ -105,7 +102,8 @@ const BusinessForm = () => {
                 placeholder="Country"
                 className="w-full p-3 border border-gray-300 bg-gray-50 rounded-lg"
               />
-               <div>
+            </div>
+            <div>
               <label className="font-medium text-gray-700 mb-1">Address</label>
               <input
                 type="text"
@@ -113,9 +111,8 @@ const BusinessForm = () => {
                 className="w-full p-3 border border-gray-300 bg-gray-50 rounded-lg"
               />
             </div>
-            </div>
-           
           </div>
+
           {/* Map */}
           <div className="mt-4">
             <MapContainer center={[37.7749, -122.4194]} zoom={13} className="w-full h-64 border border-gray-300 rounded-lg">
@@ -134,13 +131,11 @@ const BusinessForm = () => {
         <section className="mb-6">
           <h3 className="font-medium text-lg mb-4">Work Hours</h3>
           {Object.keys(workHours).map((day) => (
-            <div key={day} className="flex items-center space-x-4 mb-2">
+            <div key={day} className="flex flex-wrap items-center space-x-4 mb-2">
               <label className="w-1/4 capitalize font-medium text-gray-700">{day}</label>
-
-              {/* Toggle Switch */}
               <div
                 onClick={() => handleWorkHoursChange(day, 'open', !workHours[day].open)}
-                className={`relative inline-flex h-6 w-11 items-center cursor-pointer transition-colors ${
+                className={`relative inline-flex h-6 w-11 cursor-pointer transition-colors ${
                   workHours[day].open ? 'bg-[#5546A0]' : 'bg-gray-300'
                 } rounded-full`}
               >
@@ -150,7 +145,6 @@ const BusinessForm = () => {
                   } inline-block h-4 w-4 bg-white rounded-full`}
                 />
               </div>
-
               <input
                 type="time"
                 value={workHours[day].start}
@@ -173,7 +167,7 @@ const BusinessForm = () => {
         {/* Services */}
         <section className="mb-6">
           <h3 className="font-medium text-lg mb-4">Services</h3>
-          <div className="grid grid-cols-1 gap-y-4">
+          <div className="grid grid-cols-1 gap-4">
             <div>
               <label className="font-medium text-gray-700 mb-1">Category</label>
               <input
@@ -195,8 +189,8 @@ const BusinessForm = () => {
         </section>
 
         {/* Buttons */}
-        <div className="flex justify-between">
-          <button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg">
+        <div className="flex flex-col sm:flex-row justify-between">
+          <button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg mb-2 sm:mb-0">
             Cancel
           </button>
           <button className="px-6 py-2 bg-[#5546A0] text-white rounded-lg">
@@ -209,6 +203,7 @@ const BusinessForm = () => {
 };
 
 export default BusinessForm;
+
 
 
 
