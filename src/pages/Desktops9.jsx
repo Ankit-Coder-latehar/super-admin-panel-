@@ -2,6 +2,8 @@ import React from 'react';
 import Sidebar from '../components/Sidebar';
 import Desktop6Form from '../components/Desktop6/Desktop6';
 import Desktop9Form from '../components/Desktop9/Desktop9';
+import Dashboard2Sidebar from '../components/Dashboard2.sidebar';
+import Desktop9Sidebar from '../components/Desktop9/Desktop9Sidebar';
 
 const Desktops9 = () => {
   return (
@@ -15,7 +17,7 @@ const Desktops9 = () => {
       <div className="flex bg-gray-100 mt-[-40px]">
         {/* Sidebar */}
         <div className="w-1/9 bg-purple-700 min-h-screen">
-          <Sidebar />
+          <Desktop9Sidebar/>
         </div>
 
         {/* Main content (Business Table) */}
