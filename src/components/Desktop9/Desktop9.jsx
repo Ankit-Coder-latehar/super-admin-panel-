@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { FiEye, FiEyeOff } from 'react-icons/fi';
+import { FiEye, FiEyeOff, FiChevronDown } from 'react-icons/fi';
 
 const Desktop9Form = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [selectedTag, setSelectedTag] = useState('');
+  const [selectedTags, setSelectedTags] = useState([]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const tagsList = [
     'Haircut & Styling', 'Facials & Skin Care', 'Lashes & Eyebrows', 'Massages',
@@ -11,8 +12,12 @@ const Desktop9Form = () => {
     'Barbering', 'Hair Extensions', 'Other'
   ];
 
-  const handleTagChange = (event) => {
-    setSelectedTag(event.target.value);
+  const handleTagChange = (tag) => {
+    setSelectedTags((prevSelectedTags) =>
+      prevSelectedTags.includes(tag)
+        ? prevSelectedTags.filter((t) => t !== tag)
+        : [...prevSelectedTags, tag]
+    );
   };
 
   return (
@@ -50,7 +55,7 @@ const Desktop9Form = () => {
                   <option>Select gender</option>
                   <option>Male</option>
                   <option>Female</option>
-                  <option>Non-Binary</option>
+                  <option>Unisex</option>
                 </select>
               </div>
               <div className="flex flex-col">
@@ -83,12 +88,31 @@ const Desktop9Form = () => {
               </div>
               <div className="flex flex-col">
                 <label className="font-medium text-gray-700 mb-1">Tags</label>
-                <select value={selectedTag} onChange={handleTagChange} className="p-3 border border-gray-300 bg-gray-50 rounded-lg">
-                  <option value="">Select a tag</option>
-                  {tagsList.map((tag) => (
-                    <option key={tag} value={tag}>{tag}</option>
-                  ))}
-                </select>
+                <div className="relative">
+                  <button
+                    type="button"
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    className="p-3 w-full border border-gray-300 bg-gray-50 rounded-lg text-left flex items-center justify-between"
+                  >
+                    {selectedTags.length > 0 ? selectedTags.join(', ') : 'Select tags'}
+                    <FiChevronDown className="ml-2" />
+                  </button>
+                  {isDropdownOpen && (
+                    <div className="absolute z-10 w-full bg-white border border-gray-300 mt-1 rounded-lg shadow-lg max-h-40 overflow-y-auto">
+                      {tagsList.map((tag) => (
+                        <div key={tag} className="flex items-center p-2 hover:bg-gray-100">
+                          <input
+                            type="checkbox"
+                            checked={selectedTags.includes(tag)}
+                            onChange={() => handleTagChange(tag)}
+                            className="mr-2"
+                          />
+                          <label>{tag}</label>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
               <div className="flex flex-col">
                 <label className="font-medium text-gray-700 mb-1">VAT No.</label>
@@ -147,3 +171,4 @@ const Desktop9Form = () => {
 };
 
 export default Desktop9Form;
+
