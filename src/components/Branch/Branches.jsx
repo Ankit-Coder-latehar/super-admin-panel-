@@ -4,7 +4,7 @@ const BusinessForm = () => {
   return (
     <div className="flex flex-col lg:flex-row items-start justify-start p-4 lg:p-6 h-auto lg:h-screen lg:mr-20">
       {/* Business form with larger width for mobile screens */}
-      <form className="bg-white shadow-md rounded-md w-full sm:max-w-md lg:max-w-xl p-4 lg:p-6 space-y-4 mb-6 lg:mb-0">
+      <form className="bg-white shadow-md rounded-md w-full lg:max-w-[80rem] sm:max-w-md  p-4 lg:p-6 space-y-4 mb-6 lg:mb-0">
         <div className="flex flex-col">
           <label className="text-sm font-medium text-gray-700">Business Name</label>
           <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-6 mt-2 space-y-4 lg:space-y-0">

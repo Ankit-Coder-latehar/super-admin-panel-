@@ -51,11 +51,11 @@ const BusinessTable = () => {
   };
 
   return (
-    <div className="p-4 sm:p-6 md:p-8">
+    <div className="p-4 sm:p-6 md:p-8 ml-2 sm:ml-4">
       {/* Search and New Button Section */}
-      <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0 ml-2 sm:ml-0">
         {/* Search Bar */}
-        <div className="relative w-full sm:w-1/3">
+        <div className="relative w-full sm:w-1/2">
           <input
             type="text"
             placeholder="Search by business name..."
@@ -74,8 +74,9 @@ const BusinessTable = () => {
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto rounded-2xl border border-[#EB5F8C] shadow-lg ml-4 sm:ml-0">
-        <table className="w-full border-separate border-spacing-0 rounded-lg text-sm sm:text-base">
+      <div className="overflow-x-auto rounded-2xl border border-[#EB5F8C] shadow-lg sm:w-[98%] ml-2 sm:ml-4">
+        {/* Table for larger screens */}
+        <table className="w-full border-separate border-spacing-0 rounded-lg text-sm sm:text-base hidden sm:table">
           <thead className="bg-[#EB5F8C] text-white">
             <tr>
               <th className="px-4 py-2 text-left">Business Name</th>
@@ -116,7 +117,7 @@ const BusinessTable = () => {
                       ></div>
                       <div
                         className={`absolute left-1 top-1 w-3 sm:w-4 h-3 sm:h-4 bg-white rounded-full shadow transition transform ${
-                          row.active ? 'translate-x-4 sm:translate-x-4' : ''
+                          row.active ? 'translate-x-4 sm:translate-x-5' : ''
                         }`}
                       ></div>
                     </div>
@@ -149,6 +150,65 @@ const BusinessTable = () => {
             ))}
           </tbody>
         </table>
+
+        {/* Mobile View as Cards */}
+        <div className="block sm:hidden space-y-4 ml-2">
+          {businessData.map((row, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-md rounded-lg p-4 border border-[#EB5F8C] mb-2"
+            >
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="font-semibold">{row.businessName}</h3>
+                <label className="flex items-center cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={row.active}
+                    onChange={() => toggleActive(index)}
+                    className="sr-only"
+                  />
+                  <div className="relative">
+                    <div
+                      className={`block w-8 h-5 rounded-full transition ${
+                        row.active ? 'bg-green-400' : 'bg-gray-300'
+                      }`}
+                    ></div>
+                    <div
+                      className={`absolute left-1 top-1 w-3 h-3 bg-white rounded-full shadow transition transform ${
+                        row.active ? 'translate-x-4' : ''
+                      }`}
+                    ></div>
+                  </div>
+                </label>
+              </div>
+              <p className="text-sm">Branches: {row.branches}</p>
+              <p className="text-sm">Subscription: {row.subscription}</p>
+              <p className="text-sm">Expire Date: {row.expireDate}</p>
+              <div className="flex justify-end space-x-2 mt-2">
+                <button className="text-black">
+                  <FaPen />
+                </button>
+                <button
+                  className="text-black"
+                  onClick={() => togglePopup(index)}
+                >
+                  <FaEllipsisV />
+                </button>
+              </div>
+              {/* Popup for Edit and Delete */}
+              {activePopup === index && (
+                <div className="absolute right-0 top-8 w-32 bg-white shadow-lg border rounded-md z-10">
+                  <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                    Edit
+                  </button>
+                  <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                    Subscription
+                  </button>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

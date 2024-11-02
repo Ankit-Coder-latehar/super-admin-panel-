@@ -5,8 +5,8 @@ import 'react-phone-input-2/lib/style.css'; // Importing styles for phone input
 
 const Desktop28Form = () => {
   return (
-    <div className="flex items-center justify-left bg-gray-100 mt-5">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-2/5 ml-20">
+    <div className="flex items-center justify-center bg-gray-100 mt-5 p-4 sm:p-8">
+      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl">
         <h2 className="text-lg font-semibold mb-6 text-gray-800">Edit Admins</h2>
 
         {/* First Name Input */}
@@ -38,7 +38,6 @@ const Desktop28Form = () => {
             <option value="viewer" className='hover:bg-[#D5D1E8]'>Business Manager</option>
             <option value="viewer" className='hover:bg-[#D5D1E8]'>Admin</option>
             <option value="viewer" className='hover:bg-[#D5D1E8]'>Full Access</option>
-
           </select>
         </div>
 
@@ -51,8 +50,6 @@ const Desktop28Form = () => {
             className="border rounded-md w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           />
         </div>
-
-       
 
         {/* Buttons */}
         <div className="flex justify-end space-x-4">

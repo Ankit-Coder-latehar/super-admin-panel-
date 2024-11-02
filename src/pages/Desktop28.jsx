@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from '../components/Sidebar';
 import Desktop28Form from '../components/Desktop28/Desktop28';
+import AdminSidebar from '../components/AdminSidebar';
 
 const Desktop28 = () => {
   return (
@@ -14,7 +15,7 @@ const Desktop28 = () => {
       <div className="flex bg-gray-100 mt-[-40px]">
         {/* Sidebar */}
         <div className="w-1/9 bg-purple-700 min-h-screen">
-          <Sidebar />
+          <AdminSidebar/>
         </div>
 
         {/* Main content (Business Table) */}

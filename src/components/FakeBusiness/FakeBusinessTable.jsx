@@ -9,12 +9,44 @@ const FakeBusinessTable = () => {
       phone: '0501234567',
       address: 'Dubai, Sheikh Zayed Road',
     },
+    // Add more entries for better testing on mobile view
+    {
+      businessName: 'Glamour Spa',
+      website: 'glamourspa.com',
+      phone: '0509876543',
+      address: 'Abu Dhabi, Al Maryah Island',
+    },
   ]);
 
   return (
-    <div className="p-4 sm:p-6 lg:p-8 ">
-      {/* Table */}
-      <div className="overflow-x-auto border-[#EB5F8C] rounded-2xl shadow-md mt-[-40]">
+    <div className="p-4 sm:p-6 lg:p-8">
+      {/* Mobile View as Cards */}
+      <div className="block sm:hidden space-y-4">
+        {businessData.map((row, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-md rounded-lg p-4 border border-[#EB5F8C] mb-2"
+          >
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="font-semibold">{row.businessName}</h3>
+              <button className="text-black">
+                <FaEllipsisV />
+              </button>
+            </div>
+            <p className="text-sm">Website: {row.website}</p>
+            <p className="text-sm">Phone: {row.phone}</p>
+            <p className="text-sm">Address: {row.address}</p>
+            <div className="flex justify-end mt-2">
+              <button className="text-black hover:text-indigo-600 transition-all">
+                Edit
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Table for larger screens */}
+      <div className="hidden sm:block overflow-x-auto border-[#EB5F8C] rounded-2xl shadow-md">
         <table className="w-full border-separate border-spacing-0 border-[#EB5F8C] rounded-lg">
           <thead className="bg-[#EB5F8C] text-white">
             <tr>
@@ -52,3 +84,4 @@ const FakeBusinessTable = () => {
 };
 
 export default FakeBusinessTable;
+

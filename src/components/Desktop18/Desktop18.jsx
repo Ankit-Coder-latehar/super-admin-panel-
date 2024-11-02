@@ -3,8 +3,8 @@ import { AiOutlineCalendar } from 'react-icons/ai'; // Importing calendar icon
 
 const Desktop18Form = () => {
   return (
-    <div className="flex items-center justify-left bg-gray-100 mt-5">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-2/5 ml-20">
+    <div className="flex items-center justify-center bg-gray-100 mt-5 px-4 sm:px-8">
+      <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 w-full max-w-md sm:max-w-lg lg:max-w-2xl sm:ml-2 ml-4">
         <h2 className="text-lg font-semibold mb-6 text-gray-800">New Seo Content</h2>
 
         {/* Type Dropdown */}
@@ -12,9 +12,9 @@ const Desktop18Form = () => {
           <label className="block text-sm font-medium text-gray-700 mb-1">Type</label>
           <select className="border rounded-md w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
             <option value="article">select type</option>
-            <option value="blog" className='bg-[#D5D1E8]'>Branch</option>
-            <option value="product" className='hover:bg-[#D5D1E8]'>FakeBranch</option>
-            <option value="service" className='hover:bg-[#D5D1E8]'>Category</option>
+            <option value="blog" className="bg-[#D5D1E8]">Branch</option>
+            <option value="product" className="hover:bg-[#D5D1E8]">FakeBranch</option>
+            <option value="service" className="hover:bg-[#D5D1E8]">Category</option>
           </select>
         </div>
 
@@ -73,3 +73,4 @@ const Desktop18Form = () => {
 };
 
 export default Desktop18Form;
+

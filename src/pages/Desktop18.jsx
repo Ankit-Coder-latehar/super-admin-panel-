@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../components/Sidebar';
+import SeoSidebar from "../components/SeoSidebar"
 import Desktop18Form from '../components/Desktop18/Desktop18';
 
 const Desktop18 = () => {
@@ -14,7 +14,7 @@ const Desktop18 = () => {
       <div className="flex bg-gray-100 mt-[-40px]">
         {/* Sidebar */}
         <div className="w-1/9 bg-purple-700 min-h-screen">
-          <Sidebar />
+          <SeoSidebar/>
         </div>
 
         {/* Main content (Business Table) */}

@@ -1,12 +1,12 @@
 import React from 'react';
-import { AiOutlineCalendar } from 'react-icons/ai'; // Importing calendar icon
+import { AiOutlineCalendar } from 'react-icons/ai';
 import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css'; // Importing styles for phone input
+import 'react-phone-input-2/lib/style.css';
 
 const Desktop27Form = () => {
   return (
-    <div className="flex items-center justify-left bg-gray-100 mt-5">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-2/5 ml-20">
+    <div className="flex items-center justify-center bg-gray-100 mt-5 px-4 sm:px-8">
+      <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 w-full max-w-md sm:max-w-lg lg:max-w-2xl ml-4 sm:ml-0"> {/* Added margin-left for small screens */}
         <h2 className="text-lg font-semibold mb-6 text-gray-800">New Admins</h2>
 
         {/* First Name Input */}
@@ -33,12 +33,11 @@ const Desktop27Form = () => {
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700 mb-1">Type</label>
           <select className="border rounded-md w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-            <option value="admin" className='hover:bg-[#D5D1E8]'>Select Type</option>
-            <option value="editor" className='bg-[#D5D1E8]'>Seo</option>
-            <option value="viewer" className='hover:bg-[#D5D1E8]'>Business Manager</option>
-            <option value="viewer" className='hover:bg-[#D5D1E8]'>Admin</option>
-            <option value="viewer" className='hover:bg-[#D5D1E8]'>Full Access</option>
-
+            <option value="admin" className="hover:bg-[#D5D1E8]">Select Type</option>
+            <option value="editor" className="bg-[#D5D1E8]">Seo</option>
+            <option value="viewer" className="hover:bg-[#D5D1E8]">Business Manager</option>
+            <option value="viewer" className="hover:bg-[#D5D1E8]">Admin</option>
+            <option value="viewer" className="hover:bg-[#D5D1E8]">Full Access</option>
           </select>
         </div>
 
@@ -51,8 +50,6 @@ const Desktop27Form = () => {
             className="border rounded-md w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           />
         </div>
-
-       
 
         {/* Buttons */}
         <div className="flex justify-end space-x-4">
@@ -69,3 +66,4 @@ const Desktop27Form = () => {
 };
 
 export default Desktop27Form;
+

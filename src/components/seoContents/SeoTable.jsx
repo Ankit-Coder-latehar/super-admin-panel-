@@ -10,77 +10,74 @@ const SeoTable = () => {
     setActivePopup(activePopup === index ? null : index); // Toggle between open/close
   };
 
+  // Sample data (replace with your actual data)
+  const seoData = [
+    { type: "Branch", link: "Test", title: "Salon" },
+    { type: "Service", link: "Test Service", title: "Spa" },
+    { type: "Product", link: "Test Product", title: "Shampoo" },
+  ];
+
   return (
-    <div className="overflow-x-auto rounded-lg font-inter">
-      <table className="min-w-full table-auto">
-        <thead>
-          <tr className="bg-pink-500 text-white">
-            <th className="px-6 py-3 text-left">Type</th>
-            <th className="px-6 py-3 text-left">Link</th>
-            <th className="px-6 py-3 text-left">Title</th>
-            <th className="px-6 py-3 text-right">Actions</th>
-          </tr>
-        </thead>
-        <tbody className="bg-white">
-          <tr>
-            <td className="px-6 py-4 text-gray-900">Branch</td>
-            <td className="px-6 py-4 text-gray-900">Test</td>
-            <td className="px-6 py-4 text-gray-900">Salon</td>
-            <td className="px-6 py-4 text-right text-gray-900 relative">
-              <button
-                className="text-gray-900"
-                onClick={() => togglePopup(0)} // Index 0 for this row
-              >
+    <div className="p-4">
+      {/* Table for larger screens */}
+      <div className="hidden sm:block overflow-x-auto rounded-lg font-inter">
+        <table className="min-w-full table-auto">
+          <thead>
+            <tr className="bg-pink-500 text-white">
+              <th className="px-6 py-3 text-left">Type</th>
+              <th className="px-6 py-3 text-left">Link</th>
+              <th className="px-6 py-3 text-left">Title</th>
+              <th className="px-6 py-3 text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody className="bg-white">
+            {seoData.map((row, index) => (
+              <tr key={index}>
+                <td className="px-6 py-4 text-gray-900">{row.type}</td>
+                <td className="px-6 py-4 text-gray-900">{row.link}</td>
+                <td className="px-6 py-4 text-gray-900">{row.title}</td>
+                <td className="px-6 py-4 text-right text-gray-900 relative">
+                  <button
+                    className="text-gray-900"
+                    onClick={() => togglePopup(index)} // Index for this row
+                  >
+                    <FaEllipsisV />
+                  </button>
+                  {activePopup === index && (
+                    <div className="absolute top-10 right-0 w-32 bg-white shadow-lg border rounded-md z-10">
+                      <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                        Edit
+                      </button>
+                      <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                        Delete
+                      </button>
+                    </div>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Mobile View as Cards */}
+      <div className="block sm:hidden space-y-4">
+        {seoData.map((row, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-md rounded-lg p-4 border border-pink-500 mb-2"
+          >
+            <h3 className="font-semibold">{row.type}</h3>
+            <p className="text-sm">Link: {row.link}</p>
+            <p className="text-sm">Title: {row.title}</p>
+            <div className="flex justify-end mt-2 relative">
+              <button className="text-black" onClick={() => togglePopup(index)}>
                 <FaEllipsisV />
               </button>
-              {activePopup === 0 && (
-                <div className="absolute top-10 right-0 w-32 bg-white shadow-lg border rounded-md z-10">
-                 <a href="/desktop15"> <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
-                    Edit
-                  </button></a>
-                  <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
-                    Delete
-                  </button>
-                </div>
-              )}
-            </td>
-          </tr>
-          <tr>
-            <td className="px-6 py-4 text-gray-900">Service</td>
-            <td className="px-6 py-4 text-gray-900">Test Service</td>
-            <td className="px-6 py-4 text-gray-900">Spa</td>
-            <td className="px-6 py-4 text-right text-gray-900 relative">
-              <button
-                className="text-gray-900"
-                onClick={() => togglePopup(1)} // Index 1 for this row
-              >
-                <FaEllipsisV />
-              </button>
-              {activePopup === 1 && (
-                <div className="absolute top-10 right-0 w-32 bg-white shadow-lg border rounded-md z-10">
-                  <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
-                    Edit
-                  </button>
-                  <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
-                    Delete
-                  </button>
-                </div>
-              )}
-            </td>
-          </tr>
-          <tr>
-            <td className="px-6 py-4 text-gray-900">Product</td>
-            <td className="px-6 py-4 text-gray-900">Test Product</td>
-            <td className="px-6 py-4 text-gray-900">Shampoo</td>
-            <td className="px-6 py-4 text-right text-gray-900 relative">
-              <button
-                className="text-gray-900"
-                onClick={() => togglePopup(2)} // Index 2 for this row
-              >
-                <FaEllipsisV />
-              </button>
-              {activePopup === 2 && (
-                <div className="absolute top-10 right-0 w-32 bg-white shadow-lg border rounded-md z-10">
+
+              {/* Popup for Edit and Delete */}
+              {activePopup === index && (
+                <div className="absolute right-0 top-8 w-32 bg-white shadow-lg border rounded-md z-10">
                   <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
                     Edit
                   </button>
@@ -89,12 +86,13 @@ const SeoTable = () => {
                   </button>
                 </div>
               )}
-            </td>
-          </tr>
-        </tbody>
-      </table>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
 export default SeoTable;
+

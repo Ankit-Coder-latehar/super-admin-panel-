@@ -27,10 +27,10 @@ const Sidebar = () => {
         <div className="space-y-6">
           {/* Sidebar Images */}
           <div className="flex flex-col items-center space-y-6">
-            <a href="/" className="rounded-lg bg-[#111] transition-colors duration-300">
+            <a href="/" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
               <img src="/element-3.svg" alt="Dashboard Icon" className="w-8 h-8" />
             </a>
-            <a href="#" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
+            <a href="#" className="rounded-lg bg-[#111] transition-colors duration-300">
               <img src="/personalcard.svg" alt="Calendar Icon" className="w-8 h-8" />
             </a>
             <a href="/branch" className="rounded-lg hover:bg-[#111] transition-colors duration-300">

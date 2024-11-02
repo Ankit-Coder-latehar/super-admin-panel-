@@ -23,14 +23,14 @@ const Business14Form = () => {
   });
 
   return (
-    <div className="flex justify-center items-center min-h-screen ">
-      <div className="w-full max-w-4xl bg-white rounded-xl shadow-lg p-8 mr-40 mt-6">
+    <div className="flex justify-center items-center min-h-screen px-4">
+      <div className="w-full max-w-2xl md:max-w-4xl bg-white rounded-xl shadow-lg p-6 md:p-8">
         <h2 className="text-xl font-semibold mb-6">New Fake Business</h2>
 
         {/* Business Information */}
         <section className="mb-8">
           <h3 className="font-medium text-lg mb-4">Business Information</h3>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex flex-col items-center justify-center border-dashed border-2 border-gray-300 p-6 rounded-lg">
               <input type="file" className="hidden" id="file-upload" />
               <label htmlFor="file-upload" className="cursor-pointer">
@@ -63,16 +63,16 @@ const Business14Form = () => {
               <input
                 type="text"
                 placeholder="Business Name"
-                className="p-3 border border-gray-300 rounded-lg "
+                className="p-3 border border-gray-300 rounded-lg"
               />
               <input
                 type="text"
                 placeholder="Website"
                 className="p-3 border border-gray-300 rounded-lg"
               />
-              <div className="flex items-center space-x-2">
+              <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-2">
                 <select
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 rounded-lg w-full md:w-auto"
                   defaultValue="+971"
                 >
                   <option value="+971">+971</option>
@@ -80,7 +80,7 @@ const Business14Form = () => {
                 <input
                   type="text"
                   placeholder="Phone Number"
-                  className="p-3 border border-gray-300 rounded-lg flex-grow"
+                  className="p-3 border border-gray-300 rounded-lg w-full md:flex-grow"
                 />
               </div>
             </div>
@@ -90,7 +90,7 @@ const Business14Form = () => {
         {/* Business Address */}
         <section className="mb-8">
           <h3 className="font-medium text-lg mb-4">Business Address</h3>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
               type="text"
               placeholder="Country"
@@ -103,7 +103,6 @@ const Business14Form = () => {
             />
           </div>
           <div className="mt-4">
-            {/* Leaflet Map */}
             <MapContainer
               center={[37.7749, -122.4194]}
               zoom={13}
@@ -123,10 +122,10 @@ const Business14Form = () => {
         {/* Work Hours */}
         <section className="mb-8">
           <h3 className="font-medium text-lg mb-4">Work Hours</h3>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4">
             {Object.keys(workHours).map((day) => (
-              <div key={day} className="flex items-center space-x-2">
-                <span className="capitalize">{day}</span>
+              <div key={day} className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-2">
+                <span className="capitalize w-full md:w-auto text-center md:text-left">{day}</span>
                 <input
                   type="checkbox"
                   checked={workHours[day].open}
@@ -139,7 +138,7 @@ const Business14Form = () => {
                   className="toggle-checkbox"
                 />
                 {workHours[day].open && (
-                  <div className="flex items-center space-x-2">
+                  <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-2">
                     <input
                       type="time"
                       value={workHours[day].start}
@@ -173,7 +172,7 @@ const Business14Form = () => {
         {/* Services */}
         <section className="mb-8">
           <h3 className="font-medium text-lg mb-4">Services</h3>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
               type="text"
               placeholder="Category"
