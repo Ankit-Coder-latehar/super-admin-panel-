@@ -4,7 +4,7 @@ import BusinessTable from '../components/BusinessTable';
 
 const Dashboards2 = () => {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen bg-gray-100">
         
       {/* Sidebar */}
       <div className="w-1/13 bg-white min-h-screen ">
@@ -12,7 +12,7 @@ const Dashboards2 = () => {
       </div>
 
       {/* Main content (Business Table) */}
-      <div className="w-5/6  p-10 px-10">
+      <div className="flex-1 p-8 ">
         <BusinessTable />
       </div>
     </div>

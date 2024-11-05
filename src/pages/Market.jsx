@@ -3,7 +3,7 @@ import Sidebar from '../components/Sidebar';
 import MarketReportTable from '../components/MarketReportTable';
 const Dashboards2 = () => {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen bg-gray-100">
         
       {/* Sidebar */}
       <div className="w-1/13 bg-purple-700 min-h-screen ">

@@ -27,12 +27,13 @@ import Desktop28 from './pages/Desktop28';
 import Marketers from './pages/Marketers';
 import Desktops9 from './pages/Desktops9';
 import Desktops14 from './pages/Desktop14';
+import DashboardHome from './pages/Dashboard';
 const App = () => {
   return (
     <Router>
         <Routes>
           {/* Define your routes */}
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<DashboardHome/>} />
           <Route path="/dashboard2" element={<Dashboards2 />} />
           <Route path="/market" element={<Market />} />
           <Route path="/marketreport" element={<MarketReport />} />'

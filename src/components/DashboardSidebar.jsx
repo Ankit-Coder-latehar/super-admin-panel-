@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 
-const BranchesSidebar = () => {
+const DashboardSidebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,13 +13,13 @@ const BranchesSidebar = () => {
       {/* Desktop Sidebar */}
       <aside className="hidden lg:flex fixed top-0 left-0 h-5/7 w-1/11 bg-[#5546A0] text-white p-4 z-30 rounded-full mt-10 ml-2">
         <div className="flex flex-col items-center space-y-6 mt-12">
-          <a href="/" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">
+          <a href="/" className="rounded-lg bg-[#111] transition duration-300 p-2">
             <img src="/element-3.svg" alt="Dashboard Icon" className="w-8 h-8" />
           </a>
           <a href="/dashboard2" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">
             <img src="/personalcard.svg" alt="Calendar Icon" className="w-8 h-8" />
           </a>
-          <a href="/branch" className="rounded-lg bg-[#111] transition duration-300 p-2">
+          <a href="/branch" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">
             <img src="/location.svg" alt="Users Icon" className="w-8 h-8" />
           </a>
           <a href="/fakebusiness" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">
@@ -35,7 +35,7 @@ const BranchesSidebar = () => {
             <img src="/security-user.svg" alt="Admin Icon" className="w-8 h-8" />
           </a>
           <a href="/result" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">
-            <img src="/chart.svg" alt="Result Icon" className="w-8 h-8" />
+            <img src="/chart.svg" alt="Chart Icon" className="w-8 h-8" />
           </a>
           <a href="#" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">
             <img src="/logout.svg" alt="Logout Icon" className="w-8 h-8" />
@@ -50,7 +50,7 @@ const BranchesSidebar = () => {
           className="fixed top-4 right-4 z-50 bg-purple-800 text-white p-2 rounded-full"
           onClick={toggleMenu}
         >
-          {isMenuOpen ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
+          <HiMenuAlt3 size={24} />
         </button>
 
         {/* Sidebar for Mobile */}
@@ -59,6 +59,12 @@ const BranchesSidebar = () => {
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
+          {/* Close Icon */}
+          <div className="flex justify-end">
+            <button onClick={toggleMenu} className="text-white">
+              <HiX size={24} />
+            </button>
+          </div>
           <nav className="mt-10 space-y-6">
             <a href="/" className="flex items-center space-x-2">
               <img src="/element-3.svg" alt="Dashboard Icon" className="w-6 h-6" />
@@ -103,4 +109,4 @@ const BranchesSidebar = () => {
   );
 };
 
-export default BranchesSidebar;
+export default DashboardSidebar;

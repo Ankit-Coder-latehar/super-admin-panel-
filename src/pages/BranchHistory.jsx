@@ -4,7 +4,7 @@ import Branches2 from '../components/Branch/Branches2';
 import BranchTableHistory from '../components/Branch/BranchhistoryTable';
 const BranchHistory = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-100">
       {/* Top Heading */}
       <div className="bg-gray-100 p-4 text-left ml-20 text-4xl font-bold text-gray-800">
         Branches

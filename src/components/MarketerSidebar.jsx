@@ -13,7 +13,7 @@ const MarketerSidebar = () => {
       {/* Desktop Sidebar */}
       <aside className="hidden lg:flex fixed top-0 left-0 h-5/7 w-1/11 bg-[#5546A0] text-white p-4 z-30 rounded-full mt-10 ml-2">
         <div className="flex flex-col items-center space-y-6 mt-12">
-          <a href="/" className="rounded-lg bg-[#111] transition duration-300 p-2">
+          <a href="/" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">
             <img src="/element-3.svg" alt="Dashboard Icon" className="w-8 h-8" />
           </a>
           <a href="/dashboard2" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">

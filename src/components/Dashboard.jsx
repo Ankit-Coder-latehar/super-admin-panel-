@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
-import { HiMenuAlt3, HiX } from 'react-icons/hi'; // Menu and Close icons
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-const Dashboard = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
+const ClearDashboard = () => {
   const data = {
     labels: ['Jul 5', 'Jul 6', 'Jul 7', 'Jul 8', 'Jul 9', 'Jul 10', 'Jul 11'],
     datasets: [
@@ -51,43 +44,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="relative flex flex-col lg:flex-row min-h-screen bg-gray-100">
-      {/* Sidebar */}
-      <aside className="w-full lg:w-1/12 bg-[#5546A0] text-white p-4 h-auto lg:h-screen lg:rounded-full lg:mt-12 lg:ml-4">
-        <div className="space-y-6">
-          {/* Sidebar Images */}
-          <div className="flex lg:flex-col items-center space-x-4 lg:space-x-0 lg:space-y-6">
-            <a href="/" className="rounded-lg bg-[#111] transition-colors duration-300">
-              <img src="/element-3.svg" alt="Dashboard Icon" className="w-8 h-8" />
-            </a>
-            <a href="/dashboard2" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
-              <img src="/personalcard.svg" alt="Calendar Icon" className="w-8 h-8" />
-            </a>
-            <a href="/branch" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
-              <img src="/location.svg" alt="Users Icon" className="w-8 h-8" />
-            </a>
-            <a href="/fakebusiness" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
-              <img src="/brifecase-cross.svg" alt="Chart Icon" className="w-8 h-8" />
-            </a>
-            <a href="/seoContent" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
-              <img src="/send-sqaure-2.svg" alt="Logout Icon" className="w-8 h-8" />
-            </a>
-            <a href="/marketer" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
-              <img src="/bag-2.svg" alt="Logout Icon" className="w-8 h-8" />
-            </a>
-            <a href="/admins" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
-              <img src="/security-user.svg" alt="Logout Icon" className="w-8 h-8" />
-            </a>
-            <a href="/result" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
-              <img src="/chart.svg" alt="Logout Icon" className="w-8 h-8" />
-            </a>
-            <a href="#" className="rounded-lg hover:bg-[#111] transition-colors duration-300">
-              <img src="/logout.svg" alt="Logout Icon" className="w-8 h-8" />
-            </a>
-          </div>
-        </div>
-      </aside>
-
+    <div className="relative flex flex-col min-h-screen bg-gray-100 lg:ml-16">
       {/* Main Content */}
       <main className="flex-1 p-6">
         <h1 className="text-2xl font-bold text-purple-800 mb-6">Dashboard</h1>
@@ -185,56 +142,11 @@ const Dashboard = () => {
           </div>
         </section>
       </main>
-
-      {/* Menu Icon for Small Screens */}
-      <div className="lg:hidden fixed top-4 right-4 z-50">
-        <button onClick={toggleMenu} className="p-2 bg-purple-800 text-white rounded-full focus:outline-none">
-          <HiMenuAlt3 size={24} />
-        </button>
-      </div>
-
-      {/* Responsive Sidebar */}
-      <div className={`fixed top-0 right-0 h-screen w-64 bg-[#5546A0] text-white p-4 z-50 transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="flex justify-end">
-          <button onClick={toggleMenu} className="text-white">
-            <HiX size={24} />
-          </button>
-        </div>
-        <nav className="mt-10 space-y-6">
-          <a href="/" className="flex items-center space-x-2">
-            <img src="/element-3.svg" alt="Dashboard Icon" className="w-6 h-6" />
-            <span>Dashboard</span>
-          </a>
-          <a href="/dashboard2" className="flex items-center space-x-2">
-            <img src="/personalcard.svg" alt="Calendar Icon" className="w-6 h-6" />
-            <span>Calendar</span>
-          </a>
-          <a href="/branch" className="flex items-center space-x-2">
-            <img src="/location.svg" alt="Branch Icon" className="w-6 h-6" />
-            <span>Branches</span>
-          </a>
-          <a href="/fakebusiness" className="flex items-center space-x-2">
-            <img src="/brifecase-cross.svg" alt="Business Icon" className="w-6 h-6" />
-            <span>Businesses</span>
-          </a>
-          <a href="/seoContent" className="flex items-center space-x-2">
-            <img src="/send-sqaure-2.svg" alt="SEO Icon" className="w-6 h-6" />
-            <span>SEO Content</span>
-          </a>
-          <a href="/admins" className="flex items-center space-x-2">
-            <img src="/security-user.svg" alt="Admins Icon" className="w-6 h-6" />
-            <span>Admins</span>
-          </a>
-          <a href="/result" className="flex items-center space-x-2">
-            <img src="/chart.svg" alt="Result Icon" className="w-6 h-6" />
-            <span>Results</span>
-          </a>
-        </nav>
-      </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default ClearDashboard;
+
 
 

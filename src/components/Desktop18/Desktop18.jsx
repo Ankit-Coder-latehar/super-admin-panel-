@@ -3,7 +3,7 @@ import { AiOutlineCalendar } from 'react-icons/ai'; // Importing calendar icon
 
 const Desktop18Form = () => {
   return (
-    <div className="flex items-center justify-center bg-gray-100 mt-5 px-4 sm:px-8">
+    <div className="flex items-center justify-center bg-gray-100 mt-5 px-4 sm:px-8 lg:ml-10">
       <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 w-full max-w-md sm:max-w-lg lg:max-w-2xl sm:ml-2 ml-4">
         <h2 className="text-lg font-semibold mb-6 text-gray-800">New Seo Content</h2>
 

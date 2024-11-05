@@ -4,7 +4,7 @@ import Desktop18Form from '../components/Desktop18/Desktop18';
 
 const Desktop18 = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-100">
       {/* Top Heading */}
       <div className="bg-gray-100 p-4 text-left ml-20 text-4xl font-bold text-[#5546A0]">
         Seo Contents
@@ -18,7 +18,7 @@ const Desktop18 = () => {
         </div>
 
         {/* Main content (Business Table) */}
-        <div className="w-5/6 p-8">
+        <div className="flex-1 p-8">
           <Desktop18Form/>
         </div>
       </div>

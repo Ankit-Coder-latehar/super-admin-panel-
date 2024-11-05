@@ -51,9 +51,9 @@ const BusinessTable = () => {
   };
 
   return (
-    <div className="p-4 sm:p-6 md:p-8 ml-10 sm:ml-20 ">
+    <div className="p-4 sm:p-6 md:p-8 ml-10 sm:ml-20 lg:ml-10">
       {/* Search and New Button Section */}
-      <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0  sm:ml-0">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0 sm:ml-0">
         {/* Search Bar */}
         <div className="relative w-full sm:w-1/2">
           <input
@@ -156,7 +156,7 @@ const BusinessTable = () => {
           {businessData.map((row, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-lg p-4 border border-[#EB5F8C] mb-2"
+              className="bg-white shadow-md rounded-lg p-4 mb-2 w-[calc(100%-16px)]" // Increased width for mobile screens
             >
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-semibold">{row.businessName}</h3>
@@ -215,3 +215,4 @@ const BusinessTable = () => {
 };
 
 export default BusinessTable;
+

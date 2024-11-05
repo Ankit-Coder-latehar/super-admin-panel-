@@ -2,7 +2,7 @@ import React from 'react';
 
 const MarketCredit = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-start justify-start p-4 lg:p-6 h-auto lg:h-screen lg:mr-20">
+    <div className="flex flex-col lg:flex-row items-start justify-start p-4 lg:p-6 h-auto lg:h-screen lg:ml-14 ">
       {/* Business form with larger width on desktop */}
       <form className="bg-white shadow-md rounded-md w-full max-w-xl p-4 lg:p-6 space-y-4 mb-6 lg:mb-0">
         <div className="flex flex-col">

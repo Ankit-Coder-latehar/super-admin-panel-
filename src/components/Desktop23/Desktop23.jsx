@@ -5,8 +5,8 @@ import 'react-phone-input-2/lib/style.css'; // Importing styles for phone input
 
 const Desktop23Form = () => {
   return (
-    <div className="flex items-center justify-center bg-gray-100 mt-5">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-4/5 sm:w-2/5 mx-4">
+    <div className="flex items-center justify-center bg-gray-100 mt-5 lg:ml-10">
+      <div className="bg-white shadow-lg rounded-lg p-8 w-full sm:w-full mx-4 lg:ml-20">
         <h2 className="text-lg font-semibold mb-6 text-gray-800">New Marketer</h2>
 
         {/* First Name Input */}

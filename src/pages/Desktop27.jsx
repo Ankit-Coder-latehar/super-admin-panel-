@@ -4,7 +4,7 @@ import Desktop27Form from '../components/Desktop27/Desktop27';
 
 const Desktop27 = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-100">
       {/* Top Heading */}
       <div className="bg-gray-100 p-4 text-left ml-20 text-4xl font-bold text-[#5546A0]">
       Admins
@@ -18,7 +18,7 @@ const Desktop27 = () => {
         </div>
 
         {/* Main content (Business Table) */}
-        <div className="w-5/6 p-8">
+        <div className="flex-1 p-8">
           <Desktop27Form/>
         </div>
       </div>

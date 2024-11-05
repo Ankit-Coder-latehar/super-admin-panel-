@@ -21,7 +21,7 @@ const Desktop9Form = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-start justify-center p-4">
+    <div className="min-h-screen flex items-start justify-center p-4 lg:ml-10">
       <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-6 sm:p-8 mt-6 sm:mr-10 md:mr-40">
         <h2 className="text-xl font-semibold mb-6">New Business</h2>
         <hr className="mb-6" />

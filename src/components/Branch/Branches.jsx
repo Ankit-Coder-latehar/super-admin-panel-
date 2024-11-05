@@ -4,7 +4,7 @@ const BusinessForm = () => {
   return (
     <div className="flex flex-col lg:flex-row items-start justify-start lg:p-6 h-auto lg:h-screen lg:mr-20 ">
       {/* Business form with larger width for mobile screens */}
-      <form className="bg-white shadow-md rounded-md w-full p-4 lg:p-6 space-y-4 mb-6 lg:mb-0 lg:max-w-[80rem] sm:max-w-md lg:ml-10">
+      <form className="bg-white shadow-md rounded-md w-full p-4 lg:p-6 space-y-4 mb-6 lg:mb-0 lg:max-w-[40rem] sm:max-w-md lg:ml-10">
         <div className="flex flex-col">
           <label className="text-sm font-medium text-gray-700">Business Name</label>
           <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-4 mt-2 space-y-2 lg:space-y-0">
@@ -23,7 +23,7 @@ const BusinessForm = () => {
       </form>
 
       {/* Empty State */}
-      <div className="flex flex-col items-center justify-center text-center w-full lg:w-auto lg:ml-10 lg:ml-auto lg:h-full lg:items-center lg:justify-center">
+      <div className="flex flex-col items-center justify-center text-center w-full lg:w-auto  lg:ml-auto lg:h-full lg:items-center lg:justify-center">
         <div className="mb-4">
           {/* Add your icon component or image here */}
           <img src="/empty-image.png" alt="No data" className="w-20 h-20 sm:w-24 sm:h-24 lg:w-40 lg:h-40" />

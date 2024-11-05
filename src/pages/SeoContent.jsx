@@ -5,7 +5,7 @@ import SeoTable from '../components/seoContents/SeoTable';
 
 const SeoContent = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-100">
       {/* Top Heading */}
       <div className="bg-gray-100 p-4 text-left text-[#5546A0] ml-10 text-4xl font-bold ">
         Seo Content
