@@ -19,7 +19,7 @@ const FakeBusinessTable = () => {
   ]);
 
   return (
-    <div className="p-4 sm:p-6 lg:p-8">
+    <div className="p-4 sm:p-6 lg:p-8 lg:ml-10 ">
       {/* Mobile View as Cards */}
       <div className="block sm:hidden space-y-4">
         {businessData.map((row, index) => (

@@ -15,7 +15,7 @@ const Card = ({ title, imageUrl, altText }) => {
 
 const ResultTable = () => {
   return (
-    <div className="flex flex-wrap justify-start md:justify-center space-x-4 space-y-4 md:space-y-0"> 
+    <div className="flex flex-wrap justify-start md:justify-center space-x-4 space-y-4 md:space-y-0 lg:mr-20"> 
       {/* flex-wrap makes cards stack vertically on mobile */}
       <a href="/subscriptions" className="w-full md:w-auto"> {/* Adjust width for mobile */}
         <Card

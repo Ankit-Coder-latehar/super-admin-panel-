@@ -51,9 +51,9 @@ const BusinessTable = () => {
   };
 
   return (
-    <div className="p-4 sm:p-6 md:p-8 ml-2 sm:ml-4">
+    <div className="p-4 sm:p-6 md:p-8 ml-10 sm:ml-20 ">
       {/* Search and New Button Section */}
-      <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0 ml-2 sm:ml-0">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0  sm:ml-0">
         {/* Search Bar */}
         <div className="relative w-full sm:w-1/2">
           <input
@@ -67,7 +67,7 @@ const BusinessTable = () => {
         </div>
         {/* New Button */}
         <a href="/desktop9">
-          <button className="w-full sm:w-auto flex items-center bg-[#5546A0] text-white py-2 px-4 rounded-full hover:bg-[#5546A0]">
+          <button className="w-full sm:w-auto flex items-center bg-[#5546A0] text-white py-2 px-4 rounded-md hover:bg-[#5546A0]">
             + New
           </button>
         </a>

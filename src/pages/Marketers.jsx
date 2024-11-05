@@ -20,7 +20,7 @@ const Marketers = () => {
         </div>
 
         {/* Main content (Business Table) */}
-        <div className="w-5/6 p-8">
+        <div className="flex-1 p-8">
           <Marketer/>
         </div>
       </div>

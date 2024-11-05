@@ -18,12 +18,12 @@ const SeoTable = () => {
   ];
 
   return (
-    <div className="p-4">
+    <div className="p-4 lg:ml-12">
       {/* Table for larger screens */}
       <div className="hidden sm:block overflow-x-auto rounded-lg font-inter">
         <table className="min-w-full table-auto">
           <thead>
-            <tr className="bg-pink-500 text-white">
+            <tr className="bg-[#EB5F8C] text-white">
               <th className="px-6 py-3 text-left">Type</th>
               <th className="px-6 py-3 text-left">Link</th>
               <th className="px-6 py-3 text-left">Title</th>
@@ -65,7 +65,7 @@ const SeoTable = () => {
         {seoData.map((row, index) => (
           <div
             key={index}
-            className="bg-white shadow-md rounded-lg p-4 border border-pink-500 mb-2"
+            className="bg-white shadow-md rounded-lg p-4 border border-[#EB5F8C] mb-2"
           >
             <h3 className="font-semibold">{row.type}</h3>
             <p className="text-sm">Link: {row.link}</p>
