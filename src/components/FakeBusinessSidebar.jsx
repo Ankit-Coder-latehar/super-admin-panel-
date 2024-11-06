@@ -47,7 +47,7 @@ const FakeBusinessSidebar = () => {
       <div className="lg:hidden">
         {/* Menu Icon */}
         <button
-          className="fixed top-4 right-4 z-50 bg-purple-800 text-white p-2 rounded-full"
+          className="fixed top-4 right-4 z-50 bg-gray-100 text-black p-2 rounded-full"
           onClick={toggleMenu}
         >
           <HiMenuAlt3 size={24} />
