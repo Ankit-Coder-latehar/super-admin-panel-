@@ -18,7 +18,7 @@ const BusinessHistory = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start py-8 px-4 bg-gray-100">
+    <div className="min-h-screen flex flex-col items-center justify-start py-8 px-4 bg-gray-100 lg:mt-4">
       {/* Header Filters */}
       <div className="w-full max-w-6xl bg-gray-50 p-6 rounded-lg shadow-md mb-8">
         <div className="flex flex-col md:flex-row items-center justify-between">

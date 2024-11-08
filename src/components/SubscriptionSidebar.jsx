@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 
-const Sidebar = () => {
+const SubscriptionSidebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -12,11 +12,11 @@ const Sidebar = () => {
     <div className="relative">
       {/* Navbar with Title for Laptop Screens */}
       <nav className="flex items-center justify-between p-4 text-[#5546A0] lg:justify-start lg:pl-12 lg:fixed lg:top-0 lg:left-0 lg:w-full z-40">
-        <h1 className="text-xl font-bold lg:block hidden">Result</h1>
+        <h1 className="text-xl font-bold lg:block hidden">Subscriptions</h1>
 
         {/* Mobile Title and Menu Icon */}
         <div className="flex items-center justify-between w-full lg:hidden">
-          <h1 className="text-xl font-bold lg:hidden">Result</h1>
+          <h1 className="text-xl font-bold lg:hidden">Subscriptions</h1>
           <button
             className="text-black p-2 rounded-full"
             onClick={toggleMenu}
@@ -29,7 +29,7 @@ const Sidebar = () => {
       {/* Sidebar for Desktop */}
       <aside className="hidden lg:flex fixed top-16 left-0 h-screen w-1/11 bg-[#5546A0] text-white p-4 z-30 rounded-full mt-10 ml-2">
         <div className="flex flex-col items-center space-y-6 mt-12">
-          <a href="/" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">
+          <a href="/" className="rounded-lg bg-[#111] transition duration-300 p-2">
             <img src="/element-3.svg" alt="Dashboard Icon" className="w-8 h-8" />
           </a>
           <a href="/dashboard2" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">
@@ -50,7 +50,7 @@ const Sidebar = () => {
           <a href="/admins" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">
             <img src="/security-user.svg" alt="Admin Icon" className="w-8 h-8" />
           </a>
-          <a href="/result" className="rounded-lg bg-[#111] transition duration-300 p-2">
+          <a href="/result" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">
             <img src="/chart.svg" alt="Result Icon" className="w-8 h-8" />
           </a>
           <a href="#" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">
@@ -114,6 +114,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
-
-
+export default SubscriptionSidebar;

@@ -2,7 +2,7 @@ import React from 'react';
 
 const BusinessForm = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-start justify-start lg:p-6 h-auto lg:h-screen lg:mr-20 ">
+    <div className="flex flex-col lg:flex-row items-start justify-start lg:p-6 h-auto lg:h-screen lg:ml-10 lg:mt-10">
       {/* Business form with larger width for mobile screens */}
       <form className="bg-white shadow-md rounded-md w-full p-4 lg:p-6 space-y-4 mb-6 lg:mb-0 lg:max-w-[40rem] sm:max-w-md lg:ml-10">
         <div className="flex flex-col">
@@ -23,12 +23,12 @@ const BusinessForm = () => {
       </form>
 
       {/* Empty State */}
-      <div className="flex flex-col items-center justify-center text-center w-full lg:w-auto  lg:ml-auto lg:h-full lg:items-center lg:justify-center">
-        <div className="mb-4">
+      <div className="flex flex-col items-center justify-center w-full lg:w-auto lg:ml-auto lg:h-full lg:items-left lg:justify-center lg:mr-80">
+        <div className="flex items-left justify-left mb-4">
           {/* Add your icon component or image here */}
-          <img src="/empty-image.png" alt="No data" className="w-20 h-20 sm:w-24 sm:h-24 lg:w-40 lg:h-40" />
+          <img src="/empty-image.png" alt="No data" className="w-20 h-20 sm:w-24 sm:h-24 lg:w-40 lg:h-40 " />
         </div>
-        <p className="text-sm sm:text-md lg:text-lg text-gray-700">
+        <p className="text-sm sm:text-md lg:text-lg text-gray-700 text-center">
           Select a <span className="text-purple-600 cursor-pointer">business</span> to view branches.
         </p>
       </div>
@@ -37,3 +37,4 @@ const BusinessForm = () => {
 };
 
 export default BusinessForm;
+

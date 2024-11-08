@@ -18,7 +18,7 @@ const SeoTable = () => {
   ];
 
   return (
-    <div className="p-4 lg:ml-12">
+    <div className="p-4 lg:ml-20 ">
       {/* Table for larger screens */}
       <div className="hidden sm:block overflow-x-auto rounded-lg font-inter">
         <table className="min-w-full table-auto">
@@ -30,7 +30,7 @@ const SeoTable = () => {
               <th className="px-6 py-3 text-right">Actions</th>
             </tr>
           </thead>
-          <tbody className="bg-white">
+          <tbody className="bg-gray-100">
             {seoData.map((row, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 text-gray-900">{row.type}</td>

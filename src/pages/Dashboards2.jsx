@@ -4,16 +4,17 @@ import BusinessTable from '../components/BusinessTable';
 
 const Dashboards2 = () => {
   return (
-    <div className="flex min-h-screen bg-gray-100">
-        
-      {/* Sidebar */}
-      <div className="w-1/13 bg-white min-h-screen ">
+    <div className="flex flex-col lg:flex-row min-h-screen bg-gray-50">
+      {/* Sidebar - Visible only on larger screens */}
+      <div className=" lg:block">
         <Dashboard2Sidebar />
       </div>
 
-      {/* Main content (Business Table) */}
-      <div className="flex-1 p-8 ">
-        <BusinessTable />
+      {/* Main Content */}
+      <div className="flex-1 p-4 lg:p-6">
+        <div className="bg-gray-50 p-4 lg:p-8">
+          <BusinessTable />
+        </div>
       </div>
     </div>
   );

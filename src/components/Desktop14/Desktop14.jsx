@@ -23,7 +23,7 @@ const Business14Form = () => {
   });
 
   return (
-    <div className="flex justify-center items-center min-h-screen px-4 lg:ml-10">
+    <div className="flex justify-center items-center min-h-screen px-4 lg:ml-10 lg:mt-20">
       <div className="w-full max-w-2xl md:max-w-4xl bg-white rounded-xl shadow-lg p-6 md:p-8">
         <h2 className="text-xl font-semibold mb-6">New Fake Business</h2>
 

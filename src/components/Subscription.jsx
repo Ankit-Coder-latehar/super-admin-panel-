@@ -19,7 +19,7 @@ const Subscription = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start py-8 px-4 bg-gray-100">
+    <div className="min-h-screen flex flex-col items-center justify-start py-8 px-4 bg-gray-100 lg:py-16">
       {/* Header Filters */}
       <div className="w-full max-w-6xl bg-white p-6 rounded-lg  shadow-md mb-8">
         <div className="flex flex-col md:flex-row items-center justify-between">

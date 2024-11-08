@@ -11,7 +11,7 @@ const DataTable = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4 sm:p-8 lg:ml-10">
+    <div className="min-h-screen bg-white p-4 sm:p-8 lg:ml-10">
       <div className="max-w-7xl mx-auto">
         {/* Search bar and New button */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
@@ -19,11 +19,9 @@ const DataTable = () => {
             <input
               type="text"
               placeholder="Search by name..."
-              className="w-full sm:w-72 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
+              className="w-full sm:w-72 px-4 py-2 pl-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
             />
-            <button className="absolute right-0 top-0 text-white bg-[#5546A0] p-3 rounded-md">
-              <FiSearch size={20} />
-            </button>
+            <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
           </div>
           <a href='/desktop27'>
             <button className="flex items-center bg-[#5546A0] text-white px-4 py-2 rounded-md hover:bg-purple-700">
@@ -92,5 +90,6 @@ const DataTable = () => {
 };
 
 export default DataTable;
+
 
 

@@ -1,24 +1,25 @@
 import React from 'react';
-import DashboardSidebar from '../components/DashboardSidebar';
-import Dashboard from '../components/MarketReportTable';
+import Navbar from '../components/DashboardNavbar';
 import ClearDashboard from '../components/Dashboard';
 
-const DashboardHome = () => {
+const Dashboard = () => {
   return (
-    <div className="flex min-h-screen bg-gray-100">
-        
-      {/* Sidebar */}
-      <div className="w-1/13 bg-white min-h-screen ">
-        <DashboardSidebar/>
-      </div>
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      {/* Navbar */}
+      <Navbar />
 
-      {/* Main content (Business Table) */}
-      <div className="flex-1 p-8 ">
-        {/* <Dashboard/> */}
-        <ClearDashboard/>
+      {/* Main Content Area */}
+      <div className="flex-1 p-0 sm:p-6 sm:mt-4">
+        {/* Dashboard Content */}
+        <div className="bg-gray-100  p-8">
+          <ClearDashboard />
+        </div>
       </div>
     </div>
   );
 };
 
-export default DashboardHome;
+export default Dashboard;
+
+
+

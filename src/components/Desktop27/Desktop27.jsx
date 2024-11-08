@@ -5,7 +5,7 @@ import 'react-phone-input-2/lib/style.css';
 
 const Desktop27Form = () => {
   return (
-    <div className="flex items-center justify-center bg-gray-100 mt-5 px-4 sm:px-8">
+    <div className="flex items-center justify-center bg-white mt-5 px-4 sm:px-8 lg:mt-20">
       <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 w-full max-w-md sm:max-w-lg lg:max-w-2xl ml-4 sm:ml-0"> {/* Added margin-left for small screens */}
         <h2 className="text-lg font-semibold mb-6 text-gray-800">New Admins</h2>
 

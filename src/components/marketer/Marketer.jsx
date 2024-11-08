@@ -51,7 +51,7 @@ const Marketer = () => {
   };
 
   return (
-    <div className="p-4 sm:p-6 md:p-8 lg:ml-10">
+    <div className="p-4 sm:p-6 md:p-8 lg:ml-20 lg:mt-4">
       {/* Search and New Button Section */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0">
         {/* Search Bar */}

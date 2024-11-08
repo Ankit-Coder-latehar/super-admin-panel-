@@ -1,9 +1,9 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
 
-const FakeBusiness = () => {
+const FakeBusinesses = () => {
   return (
-    <div className="p-4 lg:p-8 lg:ml-10 ">
+    <div className="p-4 lg:p-8 lg:ml-20 lg:mt-6 ">
       <div className="flex flex-col lg:flex-row justify-between items-center mb-6 space-y-4 lg:space-y-0 lg:ml-4">
         {/* Search Bar */}
         <div className="relative w-full lg:w-1/3">
@@ -28,4 +28,4 @@ const FakeBusiness = () => {
   );
 };
 
-export default FakeBusiness;
+export default FakeBusinesses;
