@@ -3,7 +3,7 @@ import { AiOutlineCalendar } from 'react-icons/ai';
 
 const Desktop6Form = () => {
   return (
-    <div className="flex justify-center bg-gray-100 mt-5 px-4 sm:px-0">
+    <div className="flex justify-center bg-gray-100 mt-5 px-4 sm:px-0 lg:mt-10">
       <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 w-full sm:w-3/5 sm:ml-4 ml-8">
         <h2 className="text-lg font-semibold mb-4 sm:mb-6 text-gray-800 text-center sm:text-left">Charge Marketing Credit</h2>
 

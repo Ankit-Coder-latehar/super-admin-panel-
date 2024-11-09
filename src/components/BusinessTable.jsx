@@ -54,7 +54,6 @@ const BusinessTable = () => {
     <div className="p-4 sm:p-6 md:p-8 ml-10 sm:ml-20 lg:ml-10">
       {/* Search and New Button Section */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0 sm:ml-0">
-        {/* Search Bar */}
         <div className="relative w-full sm:w-1/2">
           <input
             type="text"
@@ -65,7 +64,6 @@ const BusinessTable = () => {
             <FaSearch />
           </button>
         </div>
-        {/* New Button */}
         <a href="/desktop9">
           <button className="w-full sm:w-auto flex items-center bg-[#5546A0] text-white py-2 px-4 rounded-md hover:bg-[#5546A0]">
             + New
@@ -74,8 +72,7 @@ const BusinessTable = () => {
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto rounded-2xl border border-[#EB5F8C] shadow-lg sm:w-[98%] ml-2 sm:ml-4">
-        {/* Table for larger screens */}
+      <div className="overflow-x-auto rounded-2xl shadow-lg sm:w-[98%] ml-2 sm:ml-4">
         <table className="w-full border-separate border-spacing-0 rounded-lg text-sm sm:text-base hidden sm:table">
           <thead className="bg-[#EB5F8C] text-white">
             <tr>
@@ -133,8 +130,6 @@ const BusinessTable = () => {
                   >
                     <FaEllipsisV />
                   </button>
-
-                  {/* Popup for Edit and Delete */}
                   {activePopup === index && (
                     <div className="absolute right-0 top-8 w-32 bg-white shadow-lg border rounded-md z-10">
                       <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
@@ -143,6 +138,9 @@ const BusinessTable = () => {
                       <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
                         Subscription
                       </button>
+                      <a href='/desktop6'><button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                       MarketCredit
+                      </button></a>
                     </div>
                   )}
                 </td>
@@ -156,7 +154,7 @@ const BusinessTable = () => {
           {businessData.map((row, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-lg p-4 mb-2 w-[calc(100%-16px)]" // Increased width for mobile screens
+              className="bg-white shadow-md rounded-lg p-4 mb-2 w-[90%] mx-auto" // Adjusted width and removed border
             >
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-semibold">{row.businessName}</h3>
@@ -195,7 +193,6 @@ const BusinessTable = () => {
                   <FaEllipsisV />
                 </button>
               </div>
-              {/* Popup for Edit and Delete */}
               {activePopup === index && (
                 <div className="absolute right-0 top-8 w-32 bg-white shadow-lg border rounded-md z-10">
                   <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">

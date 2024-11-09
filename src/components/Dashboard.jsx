@@ -25,29 +25,20 @@ const ClearDashboard = () => {
     maintainAspectRatio: false,
     scales: {
       x: {
-        grid: {
-          display: false,
-        },
+        grid: { display: false },
       },
       y: {
-        ticks: {
-          stepSize: 5,
-        },
+        ticks: { stepSize: 5 },
         beginAtZero: true,
       },
     },
     plugins: {
-      legend: {
-        display: false,
-      },
+      legend: { display: false },
     },
   };
 
   return (
     <div className="relative flex flex-col min-h-screen bg-gray-100 lg:ml-16">
-      
-
-      {/* Main Content */}
       <main className="flex-1 p-6 overflow-y-auto">
         {/* Stats Section */}
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -71,7 +62,7 @@ const ClearDashboard = () => {
         {/* Subscription and Charts Section */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Table */}
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white p-6 rounded-lg shadow w-full sm:w-auto">
             <h3 className="text-xl lg:text-2xl text-black font-bold mb-4">Close to subscription payment</h3>
             <table className="w-full text-left">
               <thead>
@@ -112,7 +103,7 @@ const ClearDashboard = () => {
           </div>
 
           {/* Chart */}
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white p-6 rounded-lg shadow w-full sm:w-auto">
             <h3 className="mb-4 text-xl lg:text-2xl text-black font-bold">Close to subscription payment</h3>
             <div className="h-52 w-full bg-white rounded-lg">
               <Line data={data} options={options} />
