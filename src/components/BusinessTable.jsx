@@ -150,11 +150,11 @@ const BusinessTable = () => {
         </table>
 
         {/* Mobile View as Cards */}
-        <div className="block sm:hidden space-y-4 ml-2">
+        <div className="block sm:hidden space-y-4 mx-auto w-[95%]">
           {businessData.map((row, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-lg p-4 mb-2 w-[90%] mx-auto" // Adjusted width and removed border
+              className="bg-white shadow-md rounded-lg p-2 mb-2 w-[95%] mx-auto" // Adjusted width and removed border
             >
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-semibold">{row.businessName}</h3>

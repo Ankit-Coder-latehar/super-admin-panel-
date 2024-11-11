@@ -27,8 +27,8 @@ const Sidebar = () => {
       </nav>
 
       {/* Sidebar for Desktop */}
-      <aside className="hidden lg:flex fixed top-16 left-0 h-screen w-1/11 bg-[#5546A0] text-white p-4 z-30 rounded-full mt-10 ml-2">
-        <div className="flex flex-col items-center space-y-6 mt-12">
+      <aside className="hidden lg:flex fixed top-12 left-0 h-4/5 w-1/11 bg-[#5546A0] text-white p-4 z-30 rounded-full mt-10 ml-2">
+        <div className="flex flex-col items-center space-y-2 mt-2">
           <a href="/" className="rounded-lg hover:bg-[#111] transition duration-300 p-2">
             <img src="/element-3.svg" alt="Dashboard Icon" className="w-8 h-8" />
           </a>

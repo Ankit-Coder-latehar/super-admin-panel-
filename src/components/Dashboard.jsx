@@ -39,7 +39,7 @@ const ClearDashboard = () => {
 
   return (
     <div className="relative flex flex-col min-h-screen bg-gray-100 lg:ml-16">
-      <main className="flex-1 p-6 overflow-y-auto">
+      <main className="flex-1 p-6 overflow-y-auto lg:overflow-y-hidden">
         {/* Stats Section */}
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
           <div className="bg-white p-6 rounded-lg shadow">
@@ -64,42 +64,28 @@ const ClearDashboard = () => {
           {/* Table */}
           <div className="bg-white p-6 rounded-lg shadow w-full sm:w-auto">
             <h3 className="text-xl lg:text-2xl text-black font-bold mb-4">Close to subscription payment</h3>
-            <table className="w-full text-left">
-              <thead>
-                <tr className="text-gray-500">
-                  <th className="py-2">Business Name</th>
-                  <th>Country</th>
-                  <th>Call Details</th>
-                  <th>Remaining Days</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="py-2">Beauty Minds Salon</td>
-                  <td>Emirates</td>
-                  <td>+971325841253</td>
-                  <td>25</td>
-                </tr>
-                <tr className="bg-gray-100">
-                  <td className="py-2">Beauty Minds Salon</td>
-                  <td>Bahrain</td>
-                  <td>+971325841253</td>
-                  <td>10</td>
-                </tr>
-                <tr>
-                  <td className="py-2">Beauty Minds Salon</td>
-                  <td>Kuwait</td>
-                  <td>+971325841253</td>
-                  <td>16</td>
-                </tr>
-                <tr className="bg-gray-100">
-                  <td className="py-2">Beauty Minds Salon</td>
-                  <td>Emirates</td>
-                  <td>+971325841253</td>
-                  <td>8</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="text-gray-500">
+                    <th className="py-3 px-4">Business Name</th>
+                    <th className="px-4">Country</th>
+                    <th className="px-4">Call Details</th>
+                    <th className="px-4">Remaining Days</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {['Emirates', 'Bahrain', 'Kuwait', 'Emirates'].map((country, index) => (
+                    <tr key={index} className={index % 2 === 1 ? 'bg-gray-100' : ''}>
+                      <td className="py-3 px-4">Beauty Minds Salon</td>
+                      <td className="px-4">{country}</td>
+                      <td className="px-4">+971325841253</td>
+                      <td className="px-4">{[25, 10, 16, 8][index]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
           {/* Chart */}
@@ -113,19 +99,19 @@ const ClearDashboard = () => {
 
         {/* Top Businesses Section */}
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 bg-white rounded-md p-4">
-          <div className="bg-pink-100 p-6 rounded-lg shadow">
+          <div className="bg-pink-100 p-6 rounded-lg shadow w-full sm:w-3/4 lg:w-full">
             <h4 className="text-lg font-semibold text-pink-600">#1 Business Minds Salon</h4>
             <p>Employee: 10</p>
             <p>Customer: 50</p>
             <p>Book Per Month: 3</p>
           </div>
-          <div className="bg-yellow-100 p-6 rounded-lg shadow">
+          <div className="bg-yellow-100 p-6 rounded-lg shadow w-full sm:w-3/4 lg:w-full">
             <h4 className="text-lg font-semibold text-yellow-600">#2 Business Minds Salon</h4>
             <p>Employee: 10</p>
             <p>Customer: 50</p>
             <p>Book Per Month: 3</p>
           </div>
-          <div className="bg-green-100 p-6 rounded-lg shadow">
+          <div className="bg-green-100 p-6 rounded-lg shadow w-full sm:w-3/4 lg:w-full">
             <h4 className="text-lg font-semibold text-green-600">#3 Business Minds Salon</h4>
             <p>Employee: 10</p>
             <p>Customer: 50</p>
@@ -138,6 +124,3 @@ const ClearDashboard = () => {
 };
 
 export default ClearDashboard;
-
-
-

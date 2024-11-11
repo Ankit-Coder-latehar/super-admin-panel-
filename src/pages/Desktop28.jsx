@@ -4,7 +4,7 @@ import Desktop28Form from '../components/Desktop28/Desktop28'
 
 const Desktop28 = () => {
   return (
-    <div>
+    <div >
       <AdminSidebar/>
       <Desktop28Form/>
     </div>
