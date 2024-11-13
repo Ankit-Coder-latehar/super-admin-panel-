@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '../components/DashboardNavbar';
-import ClearDashboard from '../components/Dashboard';
+import Navbar from "../components/Dashboard/DashboardNavbar";
+import ClearDashboard from '../components/Dashboard/Dashboard';
 
 const Dashboard = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from '../components/Sidebar';
-import ResultTable from "../components/ResultTable";
+import ResultTable from '../components/Result/ResultTable';
 
 const Result = () => {
   return (

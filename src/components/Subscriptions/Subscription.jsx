@@ -21,11 +21,11 @@ const Subscription = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-start py-8 px-4 bg-gray-100 lg:py-16">
       {/* Header Filters */}
-      <div className="w-full max-w-6xl bg-white p-6 rounded-lg  shadow-md mb-8">
+      <div className="w-full max-w-6xl bg-white p-6 rounded-lg shadow-md mb-8">
         <div className="flex flex-col md:flex-row items-center justify-between">
           
           {/* Business Name Section */}
-          <div className="relative w-full md:w-1/3 mb-6 md:mb-0 ">
+          <div className="relative w-full md:w-1/3 mb-6 md:mb-0 md:ml-2">
             <label className="block text-gray-700 font-medium mb-2">Business Name</label>
             <div
               className="flex items-center bg-gray-100 px-4 py-2 rounded-lg shadow-inner cursor-pointer justify-between"

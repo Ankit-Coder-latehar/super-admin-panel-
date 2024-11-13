@@ -51,9 +51,9 @@ const BusinessTable = () => {
   };
 
   return (
-    <div className="p-4 sm:p-6 md:p-8 ml-4 sm:ml-20 lg:ml-10">
+    <div className="w-full px-4 sm:px-6 md:px-8">
       {/* Search and New Button Section */}
-      <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0 w-full max-w-7xl mx-auto">
         <div className="relative w-full sm:w-1/2">
           <input
             type="text"
@@ -72,7 +72,7 @@ const BusinessTable = () => {
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto rounded-2xl shadow-lg sm:w-[98%] ml-2 sm:ml-4">
+      <div className="overflow-x-auto rounded-2xl shadow-lg w-full max-w-7xl mx-auto">
         <table className="w-full border-separate border-spacing-0 rounded-lg text-sm sm:text-base hidden sm:table">
           <thead className="bg-[#EB5F8C] text-white">
             <tr>
@@ -150,7 +150,7 @@ const BusinessTable = () => {
         </table>
 
         {/* Mobile View as Cards */}
-        <div className="block sm:hidden space-y-2 mx-auto w-[95%]">
+        <div className="block sm:hidden space-y-2 w-full max-w-7xl mx-auto">
           {businessData.map((row, index) => (
             <div
               key={index}
@@ -202,7 +202,7 @@ const BusinessTable = () => {
                     Subscription
                   </button>
                   <a href='/desktop6'><button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
-                   MarketCredit
+                     MarketCredit
                   </button></a>
                 </div>
               )}

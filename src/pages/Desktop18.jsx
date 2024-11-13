@@ -1,12 +1,12 @@
 import React from 'react'
-import SeoSidebar from "../components/SeoSidebar"
+import SeoSidebar from "../components/seoContents/SeoSidebar"
 import Desktop18Form from "../components/Desktop18/Desktop18"
 
 const Desktop18 = () => {
   return (
     <div>
-      <SeoSidebar/>
-      <Desktop18Form/>
+      <SeoSidebar />
+      <Desktop18Form />
     </div>
   )
 }

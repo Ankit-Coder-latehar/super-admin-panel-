@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = ({ title, imageUrl, altText }) => {
   return (
-    <div className="w-80 h-34 mx-2 bg-gray-100 mt-10">
+    <div className="w-full md:w-80 m-4 bg-gray-100">
       <div className="bg-white rounded-lg shadow-lg items-center justify-left">
         <img className="w-full h-40 object-cover p-4 rounded-md" src={imageUrl} alt={altText} />
         <div className="p-2 text-center">
@@ -15,9 +15,8 @@ const Card = ({ title, imageUrl, altText }) => {
 
 const ResultTable = () => {
   return (
-    <div className="flex flex-wrap justify-start md:justify-center space-x-4 space-y-4 md:space-y-0 lg:mr-20"> 
-      {/* flex-wrap makes cards stack vertically on mobile */}
-      <a href="/subscriptions" className="w-full md:w-auto"> {/* Adjust width for mobile */}
+    <div className="w-full flex flex-wrap justify-center gap-4">
+      <a href="/subscriptions" className="w-full md:w-auto">
         <Card
           title="Subscription History"
           imageUrl="/Rectangle 425.png"

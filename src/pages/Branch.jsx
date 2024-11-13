@@ -1,5 +1,5 @@
 import React from 'react'
-import BranchesSidebar from '../components/BranchesSidebar'
+import BranchesSidebar from '../components/Branch/BranchesSidebar'
 import BusinessForm from '../components/Branch/Branches'
 
 const Branch = () => {

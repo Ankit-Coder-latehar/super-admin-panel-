@@ -1,14 +1,14 @@
 import React from 'react'
-import SeoSidebar from '../components/SeoSidebar'
+import SeoSidebar from '../components/seoContents/SeoSidebar'
 import SearchBar from '../components/seoContents/SeoContent'
 import SeoTable from '../components/seoContents/SeoTable'
 
 const SeoContent = () => {
   return (
     <div>
-      <SeoSidebar/>
-      <SearchBar/>
-      <SeoTable/>
+      <SeoSidebar />
+      <SearchBar />
+      <SeoTable />
     </div>
   )
 }

@@ -1,14 +1,14 @@
 import React from 'react'
-import FakeBusinessSidebar from '../components/FakeBusinessSidebar'
+import FakeBusinessSidebar from '../components/FakeBusiness/FakeBusinessSidebar'
 import FakeBusinesses from '../components/FakeBusiness/FakeBusiness'
 import FakeBusinessTable from '../components/FakeBusiness/FakeBusinessTable'
 
 const FakeBusiness = () => {
   return (
     <div>
-      <FakeBusinessSidebar/>
-      <FakeBusinesses/>
-       <FakeBusinessTable/>
+      <FakeBusinessSidebar />
+      <FakeBusinesses />
+      <FakeBusinessTable />
     </div>
   )
 }

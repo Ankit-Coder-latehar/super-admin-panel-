@@ -1,6 +1,6 @@
 import React from 'react';
-import Dashboard2Sidebar from '../components/Dashboard2.sidebar';
-import BusinessTable from '../components/BusinessTable';
+import Dashboard2Sidebar from "../components/Dashboard2/Dashboard2.sidebar";
+import BusinessTable from "../components/Dashboard2/BusinessTable";
 
 const Dashboards2 = () => {
   return (

@@ -38,21 +38,21 @@ const ClearDashboard = () => {
   };
 
   return (
-    <div className="relative flex flex-col min-h-screen bg-gray-100 lg:ml-16">
-      <main className="flex-1 p-6 overflow-y-auto lg:overflow-y-hidden">
+    <div className="relative flex flex-col min-h-screen bg-gray-100 w-full">
+      <main className="flex-1 p-6 lg:px-10 overflow-y-auto w-full">
         {/* Stats Section */}
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-          <div className="bg-white p-6 rounded-lg shadow">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6 w-full">
+          <div className="bg-white p-6 rounded-lg shadow w-full">
             <p className="text-black font-bold text-lg lg:text-2xl">Appointment Booked</p>
             <h2 className="text-3xl lg:text-4xl text-pink-600">30</h2>
             <p className="text-sm">(In 1 month)</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white p-6 rounded-lg shadow w-full">
             <p className="text-black font-bold text-lg lg:text-2xl">New Businesses Registered</p>
             <h2 className="text-3xl lg:text-4xl text-pink-600">2</h2>
             <p className="text-sm">(In 1 month)</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white p-6 rounded-lg shadow w-full">
             <p className="text-black font-bold text-lg lg:text-2xl">Total Businesses Registered</p>
             <h2 className="text-3xl lg:text-4xl text-pink-600">15</h2>
             <p className="text-sm">(In 1 month)</p>
@@ -60,9 +60,9 @@ const ClearDashboard = () => {
         </section>
 
         {/* Subscription and Charts Section */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
           {/* Table */}
-          <div className="bg-white p-6 rounded-lg shadow w-full sm:w-auto">
+          <div className="bg-white p-6 rounded-lg shadow w-full">
             <h3 className="text-xl lg:text-2xl text-black font-bold mb-4">Close to subscription payment</h3>
             <div className="overflow-x-auto">
               <table className="w-full text-left">
@@ -89,7 +89,7 @@ const ClearDashboard = () => {
           </div>
 
           {/* Chart */}
-          <div className="bg-white p-6 rounded-lg shadow w-full sm:w-auto">
+          <div className="bg-white p-6 rounded-lg shadow w-full">
             <h3 className="mb-4 text-xl lg:text-2xl text-black font-bold">Close to subscription payment</h3>
             <div className="h-52 w-full bg-white rounded-lg">
               <Line data={data} options={options} />
@@ -98,20 +98,20 @@ const ClearDashboard = () => {
         </section>
 
         {/* Top Businesses Section */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 bg-white rounded-md p-4">
-          <div className="bg-pink-100 p-6 rounded-lg shadow w-full sm:w-3/4 lg:w-full">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 w-full px-2 lg:px-4">
+          <div className="bg-pink-100 p-6 rounded-lg shadow w-full">
             <h4 className="text-lg font-semibold text-pink-600">#1 Business Minds Salon</h4>
             <p>Employee: 10</p>
             <p>Customer: 50</p>
             <p>Book Per Month: 3</p>
           </div>
-          <div className="bg-yellow-100 p-6 rounded-lg shadow w-full sm:w-3/4 lg:w-full">
+          <div className="bg-yellow-100 p-6 rounded-lg shadow w-full">
             <h4 className="text-lg font-semibold text-yellow-600">#2 Business Minds Salon</h4>
             <p>Employee: 10</p>
             <p>Customer: 50</p>
             <p>Book Per Month: 3</p>
           </div>
-          <div className="bg-green-100 p-6 rounded-lg shadow w-full sm:w-3/4 lg:w-full">
+          <div className="bg-green-100 p-6 rounded-lg shadow w-full">
             <h4 className="text-lg font-semibold text-green-600">#3 Business Minds Salon</h4>
             <p>Employee: 10</p>
             <p>Customer: 50</p>
