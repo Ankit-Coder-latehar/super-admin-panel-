@@ -51,9 +51,9 @@ const BusinessTable = () => {
   };
 
   return (
-    <div className="p-4 sm:p-6 md:p-8 ml-10 sm:ml-20 lg:ml-10">
+    <div className="p-4 sm:p-6 md:p-8 ml-4 sm:ml-20 lg:ml-10">
       {/* Search and New Button Section */}
-      <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0 sm:ml-0">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0">
         <div className="relative w-full sm:w-1/2">
           <input
             type="text"
@@ -65,7 +65,7 @@ const BusinessTable = () => {
           </button>
         </div>
         <a href="/desktop9">
-          <button className="w-full sm:w-auto flex items-center bg-[#5546A0] text-white py-2 px-4 rounded-md hover:bg-[#5546A0]">
+          <button className="w-full sm:w-auto flex items-center justify-center bg-[#5546A0] text-white py-2 px-4 rounded-md hover:bg-[#5546A0]">
             + New
           </button>
         </a>
@@ -150,11 +150,11 @@ const BusinessTable = () => {
         </table>
 
         {/* Mobile View as Cards */}
-        <div className="block sm:hidden space-y-4 mx-auto w-[95%]">
+        <div className="block sm:hidden space-y-2 mx-auto w-[95%]">
           {businessData.map((row, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-lg p-2 mb-2 w-[95%] mx-auto" // Adjusted width and removed border
+              className="bg-white shadow-md rounded-lg p-3 mb-1" 
             >
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-semibold">{row.businessName}</h3>
@@ -194,13 +194,16 @@ const BusinessTable = () => {
                 </button>
               </div>
               {activePopup === index && (
-                <div className="absolute right-0 top-8 w-32 bg-white shadow-lg border rounded-md z-10">
+                <div className="absolute right-4 top-12 w-32 bg-white shadow-lg border rounded-md z-10">
                   <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
                     Edit
                   </button>
                   <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
                     Subscription
                   </button>
+                  <a href='/desktop6'><button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                   MarketCredit
+                  </button></a>
                 </div>
               )}
             </div>
@@ -212,4 +215,5 @@ const BusinessTable = () => {
 };
 
 export default BusinessTable;
+
 

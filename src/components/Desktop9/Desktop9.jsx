@@ -1,5 +1,21 @@
 import React, { useState } from 'react';
 import { FiEye, FiEyeOff, FiChevronDown } from 'react-icons/fi';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+// Fix Leaflet default icon issue
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+
+const customIcon = new L.Icon({
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
 
 const Desktop9Form = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -64,10 +80,16 @@ const Desktop9Form = () => {
               </div>
               <div className="flex flex-col relative">
                 <label className="font-medium text-gray-700 mb-1">Password</label>
-                <input type={showPassword ? 'text' : 'password'} placeholder="Password" className="p-3 border border-gray-300 bg-gray-50 rounded-lg" />
-                <span className="absolute right-3 top-3 cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
-                  {showPassword ? <FiEyeOff /> : <FiEye />}
-                </span>
+                <div className="flex items-center w-full">
+                  <input
+                    type={showPassword ? 'text' : 'password'}
+                    placeholder="Password"
+                    className="p-3 pr-12 border border-gray-300 bg-gray-50 rounded-lg w-full"
+                  />
+                  <span className="absolute right-3 cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+                    {showPassword ? <FiEyeOff /> : <FiEye />}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -144,26 +166,41 @@ const Desktop9Form = () => {
                 <input type="text" placeholder="City" className="p-3 border border-gray-300 bg-gray-50 rounded-lg" />
               </div>
               <div className="flex flex-col">
-                <label className="font-medium text-gray-700 mb-1">Address</label>
-                <input type="text" placeholder="Address" className="p-3 border border-gray-300 bg-gray-50 rounded-lg" />
+                <label className="font-medium text-gray-700 mb-1">Street Address</label>
+                <input type="text" placeholder="Street Address" className="p-3 border border-gray-300 bg-gray-50 rounded-lg" />
               </div>
               <div className="flex flex-col">
-                <label className="font-medium text-gray-700 mb-1">Zip Code</label>
-                <input type="text" placeholder="Zip Code" className="p-3 border border-gray-300 bg-gray-50 rounded-lg" />
+                <label className="font-medium text-gray-700 mb-1">Postal Code</label>
+                <input type="text" placeholder="Postal Code" className="p-3 border border-gray-300 bg-gray-50 rounded-lg" />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Map */}
-        <section className="mb-8">
-          <iframe className="w-full h-64 border border-gray-300 rounded-lg" src="https://maps.google.com/maps?q=San Francisco&t=&z=13&ie=UTF8&iwloc=&output=embed" allowFullScreen loading="lazy"></iframe>
+        <hr className="border-gray-300 mb-8" />
+
+        {/* Location */}
+        <section className="mb-8 flex flex-col sm:flex-row">
+          <div className="sm:w-1/3">
+            <h3 className="font-medium text-lg mb-4">Location</h3>
+          </div>
+          <div className="sm:w-2/3">
+            <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} style={{ height: '400px', width: '100%' }}>
+              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+              <Marker position={[51.505, -0.09]} icon={customIcon}>
+                <Popup>A pretty CSS3 popup. Easily customizable.</Popup>
+              </Marker>
+            </MapContainer>
+          </div>
         </section>
 
-        {/* Buttons */}
-        <div className="flex justify-end space-x-4">
-          <button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg">Cancel</button>
-          <button className="px-6 py-2 bg-[#5546A0] text-white rounded-lg">Change</button>
+        <hr className="border-gray-300 mb-8" />
+
+        {/* Submit Button */}
+        <div className="flex justify-end">
+          <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+            Save Business
+          </button>
         </div>
       </div>
     </div>
@@ -171,4 +208,6 @@ const Desktop9Form = () => {
 };
 
 export default Desktop9Form;
+
+
 

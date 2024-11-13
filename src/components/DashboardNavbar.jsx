@@ -12,8 +12,8 @@ const Navbar = () => {
   return (
     <div className="relative">
       {/* Navbar with Title for Laptop Screens */}
-      <nav className="flex items-center justify-between p-4  text-[#5546A0] lg:justify-start lg:pl-12 lg:fixed lg:top-0 lg:left-0 lg:w-full z-40">
-        <h1 className="text-xl font-bold lg:block hidden">Dashboard </h1>
+      <nav className="flex items-center justify-between p-4 text-[#5546A0] lg:justify-start lg:pl-12 lg:fixed lg:top-0 lg:left-0 lg:w-full z-40">
+        <h1 className="text-xl font-bold lg:block hidden">Dashboard</h1>
 
         {/* Mobile Title and Menu Icon */}
         <div className="flex items-center justify-between w-full lg:hidden">
@@ -67,8 +67,8 @@ const Navbar = () => {
 
       {/* Sidebar for Mobile */}
       <div
-        className={`lg:hidden fixed top-0 right-0 h-screen w-64 bg-[#5546A0] text-white p-4 transition-transform duration-300 z-40 ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`lg:hidden fixed top-0 left-0 h-screen w-64 bg-[#5546A0] text-white p-4 transition-transform duration-300 z-40 ${
+          isMenuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         {/* Close Icon */}
@@ -122,3 +122,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
